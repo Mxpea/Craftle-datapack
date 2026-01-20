@@ -1,5 +1,5 @@
 
-
+scoreboard players enable @a craftle_settings
 
 #debug pannel
 tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:" DEBUG ",color:"yellow"},{text:"==========" ,color:"gold"}]

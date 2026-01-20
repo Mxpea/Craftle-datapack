@@ -27,4 +27,3 @@ execute if score type craftle_table matches 1 run data modify storage craftle:an
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_8 set value "minecraft:redstone"
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_9 set value "minecraft:cobblestone"
 
-
