@@ -3,6 +3,8 @@ scoreboard objectives add craftle_testitem dummy
 scoreboard objectives add craftle_table dummy
 scoreboard objectives add craftle_settings trigger
 scoreboard objectives add craftle_DISCOUNT dummy
+scoreboard objectives add craftle_scores dummy "分数"
+scoreboard objectives add craftle_dashbord dummy "CRAFTLE"
 
 team add red
 team add blue

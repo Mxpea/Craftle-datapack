@@ -18,6 +18,7 @@ tellraw @a[tag=gaming] [{text:"==========",color:"gold"},{text:" GAMING ",color:
 tellraw @a[tag=gaming] [{"text":"[开始游戏]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 1"}},{text:"[随机分队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 2"}}]
 tellraw @a[tag=gaming] [{"text":"[取消分队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 3"}},{text:"[D E B U G]",color:"red",click_event:{action:"run_command",command:"tag @s add debug"}}]
 tellraw @a[tag=gaming] [{"text":"[加入蓝队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 11"}},{text:"[加入红队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 12"}}]
+tellraw @a[tag=gaming] [{"text":"[游戏介绍]   ","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 100"}}]
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #settings
@@ -33,6 +34,16 @@ execute as @a if score @s craftle_settings matches 3 run team empty red
 execute as @a if score @s craftle_settings matches 11 run team join blue @s
 
 execute as @a if score @s craftle_settings matches 12 run team join red @s
+
+execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
+execute as @a if score @s craftle_settings matches 100 run tellraw @a {"text":"  [跳过]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
+execute as @a if score @s craftle_settings matches 101 run scoreboard players set intro craftle_DISCOUNT 0
+
+
+
+
+#DISCOUNT
+execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
 
 
 #reset
