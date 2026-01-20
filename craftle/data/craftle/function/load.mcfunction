@@ -6,11 +6,13 @@ scoreboard objectives add craftle_settings trigger
 
 team add red
 team add blue
+team modify red color red
+team modify blue color blue
 
 
 
 execute unless entity @a run schedule function craftle:load 1s
-tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏"}]
+tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏  by §aAurelith","bold":true}]
 
 
 #debug
