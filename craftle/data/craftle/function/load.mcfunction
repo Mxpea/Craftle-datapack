@@ -17,6 +17,7 @@ execute unless entity @a run schedule function craftle:load 1s
 tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏  by §aAurelith/Mxpea","bold":true}]
 
 tag @a add gaming
+function craftle:answer
 
 #debug
 tag @a add debug
