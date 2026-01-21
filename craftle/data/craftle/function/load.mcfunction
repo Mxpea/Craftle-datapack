@@ -23,11 +23,14 @@ bossbar set craftle:blue_cooldown color blue
 bossbar set craftle:blue_cooldown max 1200
 bossbar set craftle:blue_cooldown value 0
 
+gamerule send_command_feedback false
+time set day
 
 scoreboard players set red_cooldown craftle_DISCOUNT 0
 scoreboard players set blue_cooldown craftle_DISCOUNT 0
 scoreboard players set @a craftle_DISCOUNT 0
 scoreboard players set @a sneak_time 0
+scoreboard players set @a correct_times 0
 
 team add red
 team add blue
