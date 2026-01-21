@@ -37,6 +37,8 @@ team add blue
 team modify red color red
 team modify blue color blue
 tag @a remove gamer
+tag @a remove blue
+tag @a remove red
 
 
 
