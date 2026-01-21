@@ -1,5 +1,7 @@
 # **CRAFTLE**  ~  一个仿WORDLE的MC小游戏
-
+<p align="center">
+    <img width="690" src="web/craftle.png" alt="title">  
+</p
 这是一个类似于wordle的mc合成表小游戏
 
 这里有：
