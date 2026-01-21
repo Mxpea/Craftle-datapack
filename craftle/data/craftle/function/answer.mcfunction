@@ -3,16 +3,18 @@
 execute store result score type craftle_table run random value 1..10
 #scoreboard players set type craftle_table 7
 
+
+
 #reset answers
-data modify storage craftle:answer craft_1 set value "minecraft:air"
-data modify storage craftle:answer craft_2 set value "minecraft:air"
-data modify storage craftle:answer craft_3 set value "minecraft:air"
-data modify storage craftle:answer craft_4 set value "minecraft:air"
-data modify storage craftle:answer craft_5 set value "minecraft:air"
-data modify storage craftle:answer craft_6 set value "minecraft:air"
-data modify storage craftle:answer craft_7 set value "minecraft:air"
-data modify storage craftle:answer craft_8 set value "minecraft:air"
-data modify storage craftle:answer craft_9 set value "minecraft:air"
+data modify storage craftle:answer craft_1 set value "minecraft:barrier"
+data modify storage craftle:answer craft_2 set value "minecraft:barrier"
+data modify storage craftle:answer craft_3 set value "minecraft:barrier"
+data modify storage craftle:answer craft_4 set value "minecraft:barrier"
+data modify storage craftle:answer craft_5 set value "minecraft:barrier"
+data modify storage craftle:answer craft_6 set value "minecraft:barrier"
+data modify storage craftle:answer craft_7 set value "minecraft:barrier"
+data modify storage craftle:answer craft_8 set value "minecraft:barrier"
+data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 
 
 
@@ -116,7 +118,7 @@ execute if score type craftle_table matches 10 run data modify storage craftle:a
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_6 set value "minecraft:redstone"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_8 set value "minecraft:redstone"
 
-#
+#如果配方对应位置为空，则不用写
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_1 set value "minecraft:"
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_2 set value "minecraft:"
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_3 set value "minecraft:"
