@@ -12,12 +12,24 @@ tellraw @a[tag=debug] [{text:"===========================",color:"gold"}]
 
 
 tag @a remove debug
-execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
 
 #ans_trigger
 execute as @a[tag=gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score @s craftle_DISCOUNT matches 0 run scoreboard players set @s craftle_DISCOUNT 300
 execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_ans
 tellraw @a[tag=pre_check_ans] [{"text":"[提交猜测]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{text:" 注意,提交完后全队会有一分钟的冷却时间",color:"gray"}]
+execute store result bossbar craftle:red_cooldown value run scoreboard players get red_cooldown craftle_DISCOUNT
+execute store result bossbar craftle:blue_cooldown value run scoreboard players get blue_cooldown craftle_DISCOUNT
+execute if score red_cooldown craftle_DISCOUNT matches 1.. run bossbar set craftle:red_cooldown visible true
+execute if score red_cooldown craftle_DISCOUNT matches 1 run tellraw @a[team=red] {"text":"§a§l[Craftle] §r- §e你现在可以再次提交猜测！"} 
+execute as @a[team=red] at @s if score red_cooldown craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @s ~ ~ ~
+execute if score red_cooldown craftle_DISCOUNT matches 0 run bossbar set craftle:red_cooldown visible false
+
+execute if score blue_cooldown craftle_DISCOUNT matches 1.. run bossbar set craftle:blue_cooldown visible true
+execute if score blue_cooldown craftle_DISCOUNT matches 1 run tellraw @a[team=blue] {"text":"§a§l[Craftle] §r- §e你现在可以再次提交猜测！"} 
+execute as @a[team=blue] at @s if score blue_cooldown craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @s ~ ~ ~
+execute if score blue_cooldown craftle_DISCOUNT matches 0 run bossbar set craftle:blue_cooldown visible false
+bossbar set craftle:blue_cooldown players @a[team=blue]
+bossbar set craftle:red_cooldown players @a[team=red]
 
 
 
@@ -56,9 +68,11 @@ execute as @a if score @s craftle_settings matches 12 run team join red @s
 
 execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
 execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run scoreboard players set red_cooldown craftle_DISCOUNT 1200
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {"text":"§c§l[Craftle] §r- §e你还需要等待一段时间才能提交猜测！"}
+
 execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
 execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run scoreboard players set blue_cooldown craftle_DISCOUNT 1200
-
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {"text":"§c§l[Craftle] §r- §e你还需要等待一段时间才能提交猜测！"}
 
 execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {"text":"  [跳过]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
@@ -91,6 +105,8 @@ execute if score intro craftle_DISCOUNT matches 1320 run tellraw @a {text:"<Aure
 execute if score intro craftle_DISCOUNT matches 1300 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
 
 
+#last process
+execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
 
 #DISCOUNT
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
