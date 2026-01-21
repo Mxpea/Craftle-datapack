@@ -92,6 +92,10 @@ execute as @a if score @s craftle_settings matches 100 run scoreboard players se
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {"text":"  [跳过]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
 execute as @a if score @s craftle_settings matches 101 run scoreboard players set intro craftle_DISCOUNT 0
 
+execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"踢出了Aurelith_FW",color:"gray"}]
+execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"<Aurelith_FW> QAQ "}]
+execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
+
 execute if score intro craftle_DISCOUNT matches 2000 run tellraw @a [{text:"Aurelith_FW加入了游戏",color:"yellow"}]
 execute if score intro craftle_DISCOUNT matches 1960 run tellraw @a [{text:"<Aurelith_FW> 你好awa 欢迎游玩这个小游戏！"}]
 execute if score intro craftle_DISCOUNT matches 1920 run tellraw @a [{text:"<Aurelith_FW> 接下来我会简单介绍一下游戏规则w"}]
@@ -106,7 +110,7 @@ execute if score intro craftle_DISCOUNT matches 1600 run tellraw @a [{text:"<Aur
 execute if score intro craftle_DISCOUNT matches 1560 run tellraw @a [{text:"<Aurelith_FW> 例如：合成表需要2个木板，但你放了3个木板，那么你依然会收到三个黄色/绿色提示！"}]
 execute if score intro craftle_DISCOUNT matches 1520 run tellraw @a [{text:"<Aurelith_FW> 我举一个目标物品为矿车的例子："}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a "比如说你提交的物品是："
-execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/diamond"}]
+execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/diamond"},{atlas: "minecraft:items",sprite:"item/barrier"},{atlas: "minecraft:items",sprite:"item/barrier"}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"}]
 execute if score intro craftle_DISCOUNT matches 1440 run tellraw @a "那么，提交之后聊天栏会发送如下信息"
