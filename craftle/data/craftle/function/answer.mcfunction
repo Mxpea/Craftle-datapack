@@ -1,7 +1,7 @@
 
 #randomly select a crafting recipe
 execute store result score type craftle_table run random value 1..10
-#scoreboard players set type craftle_table 1
+#scoreboard players set type craftle_table 7
 
 #reset answers
 data modify storage craftle:answer craft_1 set value "minecraft:air"

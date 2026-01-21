@@ -10,6 +10,7 @@ data modify storage craftle:answer display23 set value "red"
 data modify storage craftle:answer display31 set value "red"
 data modify storage craftle:answer display32 set value "red"
 data modify storage craftle:answer display33 set value "red"
+data modify storage craftle:answer teams set from entity @a[tag=check_ans,limit=1] Tags[0]
 
 
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_1) run data modify storage craftle:answer display12 set value "yellow"
@@ -47,6 +48,7 @@ $execute as @a[tag=check_ans] if items entity @s container.20 $(craft_4) run dat
 $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_4) run data modify storage craftle:answer display31 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_4) run data modify storage craftle:answer display32 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.29 $(craft_4) run data modify storage craftle:answer display33 set value "yellow"
+
 $execute as @a[tag=check_ans] if items entity @s container.9 $(craft_5) run data modify storage craftle:answer display11 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_5) run data modify storage craftle:answer display12 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_5) run data modify storage craftle:answer display13 set value "yellow"
@@ -92,9 +94,6 @@ $execute as @a[tag=check_ans] if items entity @s container.20 $(craft_9) run dat
 $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_9) run data modify storage craftle:answer display31 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_9) run data modify storage craftle:answer display32 set value "yellow"
 
-
-
-
 $execute as @a[tag=check_ans] if items entity @s container.9 $(craft_1) run data modify storage craftle:answer display11 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_2) run data modify storage craftle:answer display12 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_3) run data modify storage craftle:answer display13 set value "green"
@@ -104,5 +103,6 @@ $execute as @a[tag=check_ans] if items entity @s container.20 $(craft_6) run dat
 $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_7) run data modify storage craftle:answer display31 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_8) run data modify storage craftle:answer display32 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.29 $(craft_9) run data modify storage craftle:answer display33 set value "green"
+
 
 function craftle:itemoutput with storage craftle:answer

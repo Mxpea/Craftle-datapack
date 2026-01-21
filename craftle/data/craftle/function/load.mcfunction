@@ -5,11 +5,16 @@ scoreboard objectives add craftle_settings trigger
 scoreboard objectives add craftle_DISCOUNT dummy
 scoreboard objectives add craftle_scores dummy "分数"
 scoreboard objectives add craftle_dashbord dummy "CRAFTLE"
+scoreboard objectives add sneak_time minecraft.custom:minecraft.sneak_time
+
+scoreboard players set @a craftle_DISCOUNT 0
+scoreboard players set @a sneak_time 0
 
 team add red
 team add blue
 team modify red color red
 team modify blue color blue
+tag @a remove gamer
 
 
 

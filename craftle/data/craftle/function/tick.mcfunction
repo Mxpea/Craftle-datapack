@@ -1,4 +1,6 @@
 
+
+
 scoreboard players enable @a craftle_settings
 recipe take @a *
 
@@ -12,6 +14,11 @@ tellraw @a[tag=debug] [{text:"===========================",color:"gold"}]
 tag @a remove debug
 execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
 
+#ans_trigger
+execute as @a[tag=gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score @s craftle_DISCOUNT matches 0 run scoreboard players set @s craftle_DISCOUNT 300
+execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_ans
+tellraw @a[tag=pre_check_ans] [{"text":"[提交猜测]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{text:" 注意,提交完后全队会有一分钟的冷却时间",color:"gray"}]
+
 
 
 #gaming pannel
@@ -23,10 +30,19 @@ tellraw @a[tag=gaming] [{"text":"[游戏介绍]   ","color":"yellow",click_event
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #settings
+execute as @a if score @s craftle_settings matches 1 run schedule function craftle:reset_teamming 1t replace
+tag @a[team=red] add red
+tag @a[team=blue] add blue
+tag @a[team=] remove blue
+tag @a[team=] remove red
+
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
+execute as @a if score @s craftle_settings matches 1 run function craftle:random_team
 
 execute as @a if score @s craftle_settings matches 2 run schedule function craftle:reset_teamming 1t replace
 execute as @a if score @s craftle_settings matches 2 run function craftle:random_team
+
+
 
 execute as @a if score @s craftle_settings matches 3 run team empty blue
 execute as @a if score @s craftle_settings matches 3 run team empty red
@@ -35,6 +51,14 @@ execute as @a if score @s craftle_settings matches 3 run team empty red
 execute as @a if score @s craftle_settings matches 11 run team join blue @s
 
 execute as @a if score @s craftle_settings matches 12 run team join red @s
+
+
+
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run scoreboard players set red_cooldown craftle_DISCOUNT 1200
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run scoreboard players set blue_cooldown craftle_DISCOUNT 1200
+
 
 execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {"text":"  [跳过]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
@@ -62,16 +86,22 @@ execute if score intro craftle_DISCOUNT matches 1440 run tellraw @a [{text:"■ 
 execute if score intro craftle_DISCOUNT matches 1440 run tellraw @a [{text:"■ ",color:green},{text:"■ ",color:yellow},{text:"■",color:green}]
 execute if score intro craftle_DISCOUNT matches 1440 run tellraw @a [{text:"■ ",color:green},{text:"■ ",color:green},{text:"■",color:green}]
 execute if score intro craftle_DISCOUNT matches 1400 run tellraw @a {text:"<Aurelith_FW> 总之，你的任务就是将这些小框全部变成绿的!"}
-execute if score intro craftle_DISCOUNT matches 1360 run tellraw @a {text:"<Aurelith_FW> 然后....记得玩的开心awa"}
-execute if score intro craftle_DISCOUNT matches 1340 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
+execute if score intro craftle_DISCOUNT matches 1360 run tellraw @a {text:"<Aurelith_FW> 但是要记住....提交之后会有一段冷却时间w"}
+execute if score intro craftle_DISCOUNT matches 1320 run tellraw @a {text:"<Aurelith_FW> 然后....记得玩的开心awa"}
+execute if score intro craftle_DISCOUNT matches 1300 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
 
 
 
 #DISCOUNT
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
+execute if score red_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove red_cooldown craftle_DISCOUNT 1
+execute if score blue_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove blue_cooldown craftle_DISCOUNT 1
+execute as @a if score @s craftle_DISCOUNT matches 1.. run scoreboard players remove @s craftle_DISCOUNT 1
 
 
 #reset
 scoreboard players set @a craftle_settings 0
+scoreboard players set @a sneak_time 0
 tag @a remove gaming
+tag @a remove pre_check_ans
 tag @a remove check_ans
