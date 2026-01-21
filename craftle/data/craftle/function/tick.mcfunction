@@ -49,6 +49,7 @@ tag @a[team=] remove blue
 tag @a[team=] remove red
 
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
+execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
 execute as @a if score @s craftle_settings matches 1 run function craftle:random_team
 
 execute as @a if score @s craftle_settings matches 2 run schedule function craftle:reset_teamming 1t replace

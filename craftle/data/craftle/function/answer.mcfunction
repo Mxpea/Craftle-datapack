@@ -65,10 +65,8 @@ execute if score type craftle_table matches 5 run data modify storage craftle:an
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_2 set value "minecraft:string"
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_3 set value "minecraft:bamboo"
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_4 set value "minecraft:bamboo"
-execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_5 set value "minecraft:air"
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_6 set value "minecraft:bamboo"
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_7 set value "minecraft:bamboo"
-execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_8 set value "minecraft:air"
 execute if score type craftle_table matches 5 run data modify storage craftle:answer craft_9 set value "minecraft:bamboo"
 
 #唱片机
@@ -83,9 +81,7 @@ execute if score type craftle_table matches 6 run data modify storage craftle:an
 execute if score type craftle_table matches 6 run data modify storage craftle:answer craft_9 set value "minecraft:oak_planks"
 
 #附魔台
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_1 set value "minecraft:air"
 execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_2 set value "minecraft:book"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_3 set value "minecraft:air"
 execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_4 set value "minecraft:diamond"
 execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_5 set value "minecraft:obsidian"
 execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_6 set value "minecraft:diamond"
@@ -105,9 +101,7 @@ execute if score type craftle_table matches 8 run data modify storage craftle:an
 execute if score type craftle_table matches 8 run data modify storage craftle:answer craft_9 set value "minecraft:obsidian"
 
 #红石比较器
-execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_1 set value "minecraft:air"
 execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_2 set value "minecraft:redstone_torch"
-execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_3 set value "minecraft:air"
 execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_4 set value "minecraft:redstone_torch"
 execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_5 set value "minecraft:quartz"
 execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_6 set value "minecraft:redstone_torch"
@@ -116,15 +110,11 @@ execute if score type craftle_table matches 9 run data modify storage craftle:an
 execute if score type craftle_table matches 9 run data modify storage craftle:answer craft_9 set value "minecraft:stone"
 
 #红石灯
-execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_1 set value "minecraft:air"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_2 set value "minecraft:redstone"
-execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_3 set value "minecraft:air"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_4 set value "minecraft:redstone"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_5 set value "minecraft:glowstone"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_6 set value "minecraft:redstone"
-execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_7 set value "minecraft:air"
 execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_8 set value "minecraft:redstone"
-execute if score type craftle_table matches 10 run data modify storage craftle:answer craft_9 set value "minecraft:air"
 
 #
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_1 set value "minecraft:"
