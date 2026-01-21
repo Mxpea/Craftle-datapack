@@ -121,6 +121,8 @@ execute if score intro craftle_DISCOUNT matches 1300 run tellraw @a [{text:"Aure
 
 #last process
 execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
+tag @a[team=red] remove blue
+tag @a[team=blue] remove red
 
 #DISCOUNT
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
