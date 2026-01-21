@@ -1,0 +1,6 @@
+tellraw @a [{"text":"==制作团队==:","color":"yellow"}]
+tellraw @a [{"text":"[数据包制作]","color":"blue"}]
+tellraw @a [{"text":"-Aurelith_FW/Mxpea","color":"green"},{text:"  整合包主体制作"}]
+tellraw @a [{"text":"-Nekoviet13","color":"green"},{text:"  配方筛选"}]
+tellraw @a [{"text":"[材质包制作]","color":"blue"}]
+tellraw @a [{"text":"-Aurelith_FW/Mxpea","color":"green"},{text:"  w？"}]
