@@ -37,11 +37,14 @@ bossbar set craftle:red_cooldown players @a[team=red]
 
 
 #gaming pannel
+tellraw @a[tag=gaming] ""
+tellraw @a[tag=gaming] ""
+tellraw @a[tag=gaming] ""
 tellraw @a[tag=gaming] [{text:"==========",color:"gold"},{text:" GAMING ",color:"yellow"},{text:"==========" ,color:"gold"}]
-tellraw @a[tag=gaming] [{"text":"[开始游戏]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 1"}},{text:"[随机分队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 2"}}]
-tellraw @a[tag=gaming] [{"text":"[取消分队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 3"}},{text:"[D E B U G]",color:"red",click_event:{action:"run_command",command:"tag @s add debug"}}]
-tellraw @a[tag=gaming] [{"text":"[加入蓝队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 11"}},{text:"[加入红队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 12"}}]
-tellraw @a[tag=gaming] [{"text":"[游戏介绍]   ","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 100"}},{"text":"[制作团队]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 64"}}]
+tellraw @a[tag=gaming] [{"text":"[开始游戏]      ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 1"}},{text:"[随机分队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 2"}}]
+tellraw @a[tag=gaming] [{"text":"[取消分队]      ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 3"}},{text:"[D E B U G]",color:"red",click_event:{action:"run_command",command:"tag @s add debug"}}]
+tellraw @a[tag=gaming] [{"text":"[加入蓝队]      ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 11"}},{text:"[加入红队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 12"}}]
+tellraw @a[tag=gaming] [{"text":"[游戏介绍]      ","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 100"}},{"text":"[制作团队]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 64"}}]
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #settings
