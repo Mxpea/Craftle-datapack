@@ -238,5 +238,7 @@ execute if score type craftle_table matches 23 run data modify storage craftle:a
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_8 set value "minecraft:"
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_9 set value "minecraft:"
 
-
-
+#参考合成表：
+#1 2 3
+#4 5 6
+#7 8 9
