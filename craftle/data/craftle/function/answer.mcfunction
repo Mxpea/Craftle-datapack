@@ -1,7 +1,7 @@
 
 #randomly select a crafting recipe
 execute store result score type craftle_table run random value 1..10
-#scoreboard players set type craftle_table 7
+scoreboard players set type craftle_table 0
 
 
 

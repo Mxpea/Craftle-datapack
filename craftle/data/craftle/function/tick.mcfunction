@@ -18,8 +18,8 @@ tag @a remove debug
 #ans_trigger
 execute as @a[tag=gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score @s craftle_DISCOUNT matches 0 run scoreboard players set @s craftle_DISCOUNT 300
 execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_ans
-tellraw @a[tag=pre_check_ans] [{"text":"[提交猜测]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{text:" 注意,提交完后全队会有一分钟的冷却时间",color:"gray"}]
-tellraw @a[tag=pre_check_ans] [{"text":"[获取合成空位]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 199"}},{text:" 使用它代替合成表为空的部分，直接扔出会消失",color:"gray"}]
+tellraw @a[tag=pre_check_ans] [{"text":"[提交猜测]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{text:"      注意,提交完后全队会有一分钟的冷却时间",color:"gray"}]
+tellraw @a[tag=pre_check_ans] [{"text":"[获取合成空位]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 199"}},{text:"      使用它代替合成表为空的部分，直接扔出会消失",color:"gray"}]
 execute store result bossbar craftle:red_cooldown value run scoreboard players get red_cooldown craftle_DISCOUNT
 execute store result bossbar craftle:blue_cooldown value run scoreboard players get blue_cooldown craftle_DISCOUNT
 execute if score red_cooldown craftle_DISCOUNT matches 1.. run bossbar set craftle:red_cooldown visible true
@@ -41,10 +41,13 @@ tellraw @a[tag=gaming] [{text:"==========",color:"gold"},{text:" GAMING ",color:
 tellraw @a[tag=gaming] [{"text":"[开始游戏]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 1"}},{text:"[随机分队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 2"}}]
 tellraw @a[tag=gaming] [{"text":"[取消分队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 3"}},{text:"[D E B U G]",color:"red",click_event:{action:"run_command",command:"tag @s add debug"}}]
 tellraw @a[tag=gaming] [{"text":"[加入蓝队]   ","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 11"}},{text:"[加入红队]",color:"green",click_event:{action:"run_command",command:"trigger craftle_settings set 12"}}]
-tellraw @a[tag=gaming] [{"text":"[游戏介绍]   ","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 100"}}]
+tellraw @a[tag=gaming] [{"text":"[游戏介绍]   ","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 100"}},{"text":"[制作团队]","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 64"}}]
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #settings
+execute as @a if score @s craftle_settings matches 64 run function craftle:maker_list
+
+
 execute as @a if score @s craftle_settings matches 1 run schedule function craftle:reset_teamming 1t replace
 tag @a[team=red] add red
 tag @a[team=blue] add blue

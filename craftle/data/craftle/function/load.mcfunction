@@ -1,3 +1,5 @@
+scoreboard objectives remove craftle_DISCOUNT
+
 
 scoreboard objectives add craftle_testitem dummy
 scoreboard objectives add craftle_table dummy
@@ -6,6 +8,7 @@ scoreboard objectives add craftle_DISCOUNT dummy
 scoreboard objectives add craftle_scores dummy "分数"
 scoreboard objectives add craftle_dashbord dummy "CRAFTLE"
 scoreboard objectives add sneak_time minecraft.custom:minecraft.sneak_time
+scoreboard objectives add correct_times dummy
 
 bossbar remove craftle:red_cooldown
 bossbar remove craftle:blue_cooldown
@@ -41,5 +44,5 @@ tag @a add gaming
 function craftle:answer
 
 #debug
-tag @a add debug
+#tag @a add debug
 #scoreboard objectives setdisplay sidebar craftle_settings
