@@ -1,6 +1,6 @@
 
 #randomly select a crafting recipe
-execute store result score type craftle_table run random value 1..28
+execute store result score type craftle_table run random value 1..40
 #scoreboard players set type craftle_table 0
 
 
@@ -18,7 +18,7 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 
 #统计配方列表 一行20个
 #活塞 音符盒 侦测器 TNT 脚手架 唱片机 附魔台 末影箱 红石比较器 红石灯 砂轮 附魔台 切石机 讲台 制箭台 锻造台 制图台 织布机 重生锚 磁石 
-#烟熏炉 高炉 铁砧 指南针 钟 铁轨 充能铁轨 探测铁轨
+#烟熏炉 高炉 铁砧 指南针 钟 铁轨 充能铁轨 探测铁轨 激活铁轨 白色羊毛画 物品展示框 白色旗帜 遮光玻璃 末地水晶 木桶 灯笼 煤炭营火 灵魂营火（灵魂沙） 悬挂式橡木告示牌 铜箱子
 
 #活塞
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_1 set value "minecraft:oak_planks"
@@ -271,6 +271,127 @@ execute if score type craftle_table matches 28 run data modify storage craftle:a
 execute if score type craftle_table matches 28 run data modify storage craftle:answer craft_7 set value "minecraft:iron_ingot"
 execute if score type craftle_table matches 28 run data modify storage craftle:answer craft_8 set value "minecraft:redstone"
 execute if score type craftle_table matches 28 run data modify storage craftle:answer craft_9 set value "minecraft:iron_ingot"
+
+#激活铁轨
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_1 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_3 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_4 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_5 set value "minecraft:redstone_torch"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_6 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_7 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+execute if score type craftle_table matches 29 run data modify storage craftle:answer craft_9 set value "minecraft:iron_ingot"
+
+#白色羊毛画
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_1 set value "minecraft:white_wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_2 set value "minecraft:white_wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_3 set value "minecraft:white_wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_4 set value "minecraft:white_wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_5 set value "minecraft:white_wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_6 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_7 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_9 set value "minecraft:stick"
+
+#物品展示框
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_1 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_3 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_4 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_5 set value "minecraft:leather"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_6 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_7 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+execute if score type craftle_table matches 31 run data modify storage craftle:answer craft_9 set value "minecraft:stick"
+
+#白色旗帜
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_1 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_2 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_3 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_4 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_5 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_6 set value "minecraft:white_wool"
+execute if score type craftle_table matches 32 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+
+#遮光玻璃
+execute if score type craftle_table matches 33 run data modify storage craftle:answer craft_2 set value "minecraft:amethyst_shard"
+execute if score type craftle_table matches 33 run data modify storage craftle:answer craft_4 set value "minecraft:amethyst_shard"
+execute if score type craftle_table matches 33 run data modify storage craftle:answer craft_5 set value "minecraft:glass"
+execute if score type craftle_table matches 33 run data modify storage craftle:answer craft_6 set value "minecraft:amethyst_shard"
+execute if score type craftle_table matches 33 run data modify storage craftle:answer craft_8 set value "minecraft:amethyst_shard"
+
+#末地水晶
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_1 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_2 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_3 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_4 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_5 set value "minecraft:ender_eye"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_6 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_7 set value "minecraft:glass"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_8 set value "minecraft:ghast_tear"
+execute if score type craftle_table matches 34 run data modify storage craftle:answer craft_9 set value "minecraft:glass"
+
+#木桶
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_1 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_2 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_3 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_4 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_6 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_7 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_8 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_9 set value "minecraft:oak_planks"
+
+#灯笼
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_1 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_2 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_3 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_4 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_5 set value "minecraft:torch"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_6 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_7 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_8 set value "minecraft:iron_nugget"
+execute if score type craftle_table matches 36 run data modify storage craftle:answer craft_9 set value "minecraft:iron_nugget"
+
+#煤炭营火
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_4 set value "minecraft:stick"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_5 set value "minecraft:coal"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_6 set value "minecraft:stick"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_7 set value "minecraft:oak_log"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_8 set value "minecraft:oak_log"
+execute if score type craftle_table matches 37 run data modify storage craftle:answer craft_9 set value "minecraft:oak_log"
+
+#灵魂营火（灵魂沙）
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_4 set value "minecraft:stick"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_5 set value "minecraft:coal"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_6 set value "minecraft:stick"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_7 set value "minecraft:oak_log"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_8 set value "minecraft:oak_log"
+execute if score type craftle_table matches 38 run data modify storage craftle:answer craft_9 set value "minecraft:oak_log"
+
+#悬挂式橡木告示牌
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_1 set value "minecraft:iron_chain"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_3 set value "minecraft:iron_chain"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_4 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_5 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_6 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_7 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_8 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_9 set value "minecraft:stripped_oak_log"
+
+#铜箱子
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_1 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_2 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_3 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_4 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_5 set value "minecraft:chest"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_6 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_7 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_8 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 40 run data modify storage craftle:answer craft_9 set value "minecraft:copper_ingot"
+
 
 #如果配方对应位置为空，则不用写
 #execute if score type craftle_table matches - run data modify storage craftle:answer craft_1 set value "minecraft:"
