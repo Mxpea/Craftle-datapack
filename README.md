@@ -48,6 +48,6 @@
 * Aurelith/Mxpea 负责了数据包所有逻辑的开发，以及材质包的绘制  
   b站链接：https://space.bilibili.com/517011791
 * Nekoviet13 负责了配方的筛选和导入
-* this_hacker 负责了数据包部分逻辑开发的指导，负责了非常多配方的筛选和导入，提出了非常多建议，贡献巨大
+* this_hacker 负责了数据包部分逻辑开发的指导，负责了非常多配方的筛选和导入，提出了非常多建议，贡献巨大  <-巨大在哪
   b站链接：https://space.bilibili.com/526122347
 
