@@ -18,7 +18,7 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 
 #统计配方列表 一行20个
 #弩
-#活塞 音符盒 侦测器 TNT 脚手架 唱片机 附魔台 末影箱 红石比较器 红石灯 砂轮 附魔台 切石机 讲台 制箭台 锻造台 制图台 织布机 重生锚 磁石 
+#活塞 音符盒 侦测器 TNT 脚手架 唱片机 盔甲架 末影箱 红石比较器 红石灯 砂轮 附魔台 切石机 讲台 制箭台 锻造台 制图台 织布机 重生锚 磁石 
 #烟熏炉 高炉 铁砧 指南针 钟 铁轨 充能铁轨 探测铁轨 激活铁轨 白色羊毛画 物品展示框 白色旗帜 遮光玻璃 末地水晶 木桶 灯笼 煤炭营火 灵魂营火（灵魂沙） 悬挂式橡木告示牌 铜箱子
 #蜜箱 展示架 铜灯笼 灵魂灯笼 漏斗 合成器 蛋糕 金苹果 金胡萝卜
 
@@ -95,14 +95,14 @@ execute if score type craftle_table matches 6 run data modify storage craftle:an
 execute if score type craftle_table matches 6 run data modify storage craftle:answer craft_8 set value "minecraft:oak_planks"
 execute if score type craftle_table matches 6 run data modify storage craftle:answer craft_9 set value "minecraft:oak_planks"
 
-#附魔台
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_2 set value "minecraft:book"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_4 set value "minecraft:diamond"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_5 set value "minecraft:obsidian"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_6 set value "minecraft:diamond"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_7 set value "minecraft:obsidian"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_8 set value "minecraft:obsidian"
-execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_9 set value "minecraft:obsidian"
+#盔甲架
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_1 set value "minecraft:stick"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_3 set value "minecraft:stick"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_5 set value "minecraft:stick"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_7 set value "minecraft:stick"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_8 set value "minecraft:smooth_stone_slab"
+execute if score type craftle_table matches 7 run data modify storage craftle:answer craft_9 set value "minecraft:stick"
 
 #末影箱
 execute if score type craftle_table matches 8 run data modify storage craftle:answer craft_1 set value "minecraft:obsidian"
