@@ -28,7 +28,7 @@ bossbar set craftle:blue_cooldown color blue
 bossbar set craftle:blue_cooldown max 2400
 bossbar set craftle:blue_cooldown value 0
 
-#gamerule send_command_feedback false
+gamerule send_command_feedback false
 time set day
 
 scoreboard objectives setdisplay sidebar craftle_scores
