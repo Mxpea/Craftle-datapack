@@ -1,3 +1,1 @@
-
-
 scoreboard players set @a craftle_settings 0
