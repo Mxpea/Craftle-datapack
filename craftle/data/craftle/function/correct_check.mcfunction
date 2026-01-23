@@ -8,6 +8,8 @@ execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[
 execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run title @a subtitle [{"text":"§l蓝队胜利！","bold":true,color:"blue"}]
 execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run tag @s add blue_winner
 
+$tellraw @a [{text:"§6§l[Craftle]  ",color:"yellow"},{text:"游戏结束！答案是$(item_ans)",color:"gold"}]
+
 execute as @a if score @s correct_times matches 9 run scoreboard players add @a[tag=red_winner] craftle_scores 10
 execute as @a if score @s correct_times matches 9 run scoreboard players add @a[tag=blue_winner] craftle_scores 10
 execute as @a if score @s correct_times matches 9 run execute as @a at @s run playsound entity.player.levelup player @s ~ ~ ~

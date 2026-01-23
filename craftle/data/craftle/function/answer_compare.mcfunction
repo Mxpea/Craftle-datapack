@@ -116,4 +116,4 @@ $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_8) run sco
 $execute as @a[tag=check_ans] if items entity @s container.29 $(craft_9) run scoreboard players add @s correct_times 1
 
 function craftle:itemoutput with storage craftle:answer
-function craftle:correct_check
+function craftle:correct_check with storage craftle:answer
