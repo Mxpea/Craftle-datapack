@@ -11,6 +11,7 @@ execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[
 
 execute as @a if score @s correct_times matches 9 run scoreboard players add @a[team=red] craftle_scores 10
 execute as @a if score @s correct_times matches 9 run scoreboard players add @a[team=blue] craftle_scores 10
+execute as @a if score @s correct_times matches 9 run clear @a
 execute as @a if score @s correct_times matches 9 run execute as @a at @s run playsound entity.player.levelup player @s ~ ~ ~
 
 tag @a remove red_winner
