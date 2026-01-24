@@ -5,7 +5,7 @@ scoreboard objectives add random_store dummy
 
 data remove storage craftle:temp random_list
 data remove storage craftle:temp random_store
-tellraw @a [{"text":"§6§lCraftle §r- §eLOADING","bold":true}]
+tellraw @a [{"text":"§6§lCraftle §r- §ePRE PROCESS LOADING","bold":true}]
 
 
 execute unless entity @a run schedule function craftle:pre_load_process 1s
