@@ -1,6 +1,3 @@
-
-
-
 data modify storage craftle:answer display11 set value "red"
 data modify storage craftle:answer display12 set value "red"
 data modify storage craftle:answer display13 set value "red"

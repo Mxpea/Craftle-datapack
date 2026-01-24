@@ -1,6 +1,4 @@
-
 #如果你要自己添加配方，复制下方的一串并且吧数字改成你想要的配方编号即可，此外，将pre_load_process.mcfunction中的数字也改成你添加后的总配方数
-
 
 #reset answers
 data modify storage craftle:answer craft_1 set value "minecraft:barrier"
