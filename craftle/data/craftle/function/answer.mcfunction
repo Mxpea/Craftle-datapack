@@ -30,7 +30,7 @@ execute if score type craftle_table matches 0 run data modify storage craftle:an
 execute if score type craftle_table matches 0 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
 
 #活塞
-execute if score type craftle_table matches 1 run data modify storage craftle:answer item_ans set value "活塞   "
+execute if score type craftle_table matches 1 run data modify storage craftle:answer item_ans set value "活塞"
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_1 set value "minecraft:oak_planks"
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_2 set value "minecraft:oak_planks"
 execute if score type craftle_table matches 1 run data modify storage craftle:answer craft_3 set value "minecraft:oak_planks"
