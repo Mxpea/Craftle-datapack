@@ -7,20 +7,3 @@ execute if score @a[tag=random,limit=1] random_store matches 1.. run return 1
 execute if score @a[tag=random,limit=1] random_store matches 0 run function craftle:load
 execute if score @a[tag=random,limit=1] random_store matches 0 run scoreboard players remove @a[tag=random,limit=1] random_store 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

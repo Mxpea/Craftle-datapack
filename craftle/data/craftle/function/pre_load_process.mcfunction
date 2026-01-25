@@ -1,4 +1,3 @@
-
 scoreboard objectives add random_list dummy
 scoreboard objectives add random_store dummy
 

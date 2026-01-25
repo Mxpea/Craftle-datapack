@@ -1,4 +1,3 @@
-
 data modify storage craftle:temp arg.item_11 set from entity @s Inventory[{Slot:9b}].id
 execute unless data entity @s Inventory[{Slot:9b}].id run data modify storage craftle:temp arg.item_11 set value "minecraft:air"
 data modify storage craftle:temp arg.item_12 set from entity @s Inventory[{Slot:10b}].id

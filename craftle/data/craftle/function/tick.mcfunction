@@ -1,6 +1,3 @@
-
-
-
 scoreboard players enable @a craftle_settings
 recipe take @a *
 execute as @a at @s run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace minecraft:barrier
@@ -9,6 +6,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:barrier"}}]
 #debug pannel
 tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:" DEBUG ",color:"yellow"},{text:"==========" ,color:"gold"}]
 tellraw @a[tag=debug] [{"text":"[run anschecker]","color":"aqua",click_event:{action:"run_command",command:"tag @s add check_ans"}}]
+tellraw @a[tag=debug] [{"text":"[get ansval]","color":"aqua",click_event:{action:"run_command",command:'tellraw @s [{text:"ID: "},{score:{name:"type",objective:"craftle_table"}}]'}}]
 tellraw @a[tag=debug] [{text:"===========================",color:"gold"}]
 
 
@@ -58,12 +56,18 @@ tag @a[team=] remove blue
 tag @a[team=] remove red
 
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
-execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 100 100 true @a
+execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
+execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
-execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 以及...记得所有木材使用橡木！"}
-execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 这是数据包的限制！才不是懒呢..."}
-execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 还有...我把你们的配方书吃掉啦awa"}
+execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 以及...记得所有木材使用橡木,所有染色物品使用白色哦awa"}
+#execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 这是数据包的限制！才不是懒呢..."}
+#execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 还有...我把你们的配方书吃掉啦awa"}
+execute as @a if score @s craftle_settings matches 1 run gamemode survival @a
+execute as @a if score @s craftle_settings matches 1 run gamerule pvp true
+execute as @a if score @s craftle_settings matches 1 run gamerule advance_time true
+execute as @a if score @s craftle_settings matches 1 run difficulty easy
 execute as @a if score @s craftle_settings matches 1 run function craftle:random_team
+
 execute as @a if score @s craftle_settings matches 2 run schedule function craftle:reset_teamming 1t replace
 execute as @a if score @s craftle_settings matches 2 run function craftle:random_team
 
@@ -110,7 +114,7 @@ execute if score intro craftle_DISCOUNT matches 1600 run tellraw @a [{text:"<Aur
 execute if score intro craftle_DISCOUNT matches 1560 run tellraw @a [{text:"<Aurelith_FW> 例如：合成表需要2个木板，但你放了3个木板，那么你依然会收到三个黄色/绿色提示！"}]
 execute if score intro craftle_DISCOUNT matches 1520 run tellraw @a [{text:"<Aurelith_FW> 我举一个目标物品为矿车的例子："}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a "比如说你提交的物品是："
-execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/diamond"},{atlas: "minecraft:items",sprite:"item/barrier"},{atlas: "minecraft:items",sprite:"item/barrier"}]
+execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/diamond"}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"}]
 execute if score intro craftle_DISCOUNT matches 1480 run tellraw @a [{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"},{atlas: "minecraft:items",sprite:"item/iron_ingot"}]
 execute if score intro craftle_DISCOUNT matches 1440 run tellraw @a "那么，提交之后聊天栏会发送如下信息"

@@ -51,6 +51,14 @@ tag @a remove red
 tag @a remove random
 
 
+gamemode adventure @a
+gamerule pvp false
+gamerule advance_time false
+gamerule keep_inventory true
+difficulty peaceful
+
+
+
 tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏  by §aAurelith/Mxpea","bold":true}]
 
 
