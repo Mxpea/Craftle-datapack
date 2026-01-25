@@ -38,6 +38,7 @@ scoreboard players set blue_cooldown craftle_DISCOUNT 0
 scoreboard players set @a craftle_DISCOUNT 0
 scoreboard players set @a sneak_time 0
 scoreboard players set @a correct_times 0
+scoreboard players set hint_discount craftle_DISCOUNT 0
 
 function craftle:random_gen with storage craftle:temp
 
