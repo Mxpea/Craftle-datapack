@@ -60,9 +60,7 @@ execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 2
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 以及...记得所有木材使用橡木,所有染色物品使用白色哦awa"}
-#execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 这是数据包的限制！才不是懒呢..."}
-#execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 还有...我把你们的配方书吃掉啦awa"}
-execute as @a if score @s craftle_settings matches 1 run gamemode survival @a
+execute as @a if score @s craftle_settings matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 12000
 execute as @a if score @s craftle_settings matches 1 run gamerule pvp true
 execute as @a if score @s craftle_settings matches 1 run gamerule advance_time true
 execute as @a if score @s craftle_settings matches 1 run difficulty easy
@@ -126,6 +124,16 @@ execute if score intro craftle_DISCOUNT matches 1360 run tellraw @a {text:"<Aure
 execute if score intro craftle_DISCOUNT matches 1320 run tellraw @a {text:"<Aurelith_FW> 然后....记得玩的开心awa"}
 execute if score intro craftle_DISCOUNT matches 1300 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
 
+#hint
+execute if score hint_discount craftle_DISCOUNT matches 6000 run playsound entity.experience_orb.pickup player @a
+execute if score hint_discount craftle_DISCOUNT matches 6000 run tellraw @a {text:"§a§l[Craftle] §r- §e五分钟后给予提示！"}
+
+execute if score hint_discount craftle_DISCOUNT matches 200 run playsound entity.experience_orb.pickup player @a
+execute if score hint_discount craftle_DISCOUNT matches 200 run tellraw @a {text:"§a§l[Craftle] §r- §e十秒后给予提示！"}
+
+execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
+execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
+execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:answer
 
 #last process
 clear @a minecraft:barrier
@@ -147,6 +155,7 @@ execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remov
 execute if score red_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove red_cooldown craftle_DISCOUNT 1
 execute if score blue_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove blue_cooldown craftle_DISCOUNT 1
 execute as @a if score @s craftle_DISCOUNT matches 1.. run scoreboard players remove @s craftle_DISCOUNT 1
+execute if score hint_discount craftle_DISCOUNT matches 1.. run scoreboard players remove hint_discount craftle_DISCOUNT 1
 
 
 #reset
