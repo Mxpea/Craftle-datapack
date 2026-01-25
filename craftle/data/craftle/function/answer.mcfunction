@@ -19,6 +19,7 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 #烟熏炉 高炉 铁砧 指南针 钟 铁轨 充能铁轨 探测铁轨 激活铁轨 白色羊毛画 物品展示框 白色旗帜 遮光玻璃 末地水晶 木桶 灯笼 煤炭营火 灵魂营火（灵魂沙） 悬挂式橡木告示牌 铜箱子
 #蜜箱 展示架 铜灯笼 灵魂灯笼 漏斗 合成器 蛋糕 金苹果 金胡萝卜 书架 石砖 南瓜灯 白色染色玻璃 闪长岩 砂土 白色陶瓦 白色床 橡木告示牌 白色玻璃板 木栅栏 下界砖栅栏
 #铜链 铁链 蜡烛 灵魂火把 铜火把 橡木栅栏门 红石中继器 绊线钩 投掷器 发射器 阳光探测器 标靶 校频幽匿感测体 蘑菇煲 曲奇 南瓜派 甜菜汤 兔肉煲 蜂蜜瓶 栓绳
+#望远镜 钓鱼竿 刷子 盾 弓 箭 光灵箭 闪烁的西瓜片 发酵蜘蛛眼 酿造台
 
 #弩
 execute if score type craftle_table matches 0 run data modify storage craftle:answer item_ans set value "弩"
@@ -809,6 +810,84 @@ execute if score type craftle_table matches 81 run data modify storage craftle:a
 execute if score type craftle_table matches 81 run data modify storage craftle:answer craft_4 set value "minecraft:string"
 execute if score type craftle_table matches 81 run data modify storage craftle:answer craft_5 set value "minecraft:string"
 execute if score type craftle_table matches 81 run data modify storage craftle:answer craft_9 set value "minecraft:string"
+
+# 82 望远镜
+execute if score type craftle_table matches 82 run data modify storage craftle:answer item_ans set value "望远镜"
+execute if score type craftle_table matches 82 run data modify storage craftle:answer craft_2 set value "minecraft:amethyst_shard"
+execute if score type craftle_table matches 82 run data modify storage craftle:answer craft_5 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 82 run data modify storage craftle:answer craft_8 set value "minecraft:copper_ingot"
+
+# 83 钓鱼竿
+execute if score type craftle_table matches 83 run data modify storage craftle:answer item_ans set value "钓鱼竿"
+execute if score type craftle_table matches 83 run data modify storage craftle:answer craft_3 set value "minecraft:stick"
+execute if score type craftle_table matches 83 run data modify storage craftle:answer craft_5 set value "minecraft:stick"
+execute if score type craftle_table matches 83 run data modify storage craftle:answer craft_6 set value "minecraft:string"
+execute if score type craftle_table matches 83 run data modify storage craftle:answer craft_7 set value "minecraft:stick"
+execute if score type craftle_table matches 83 run data modify storage craftle:answer craft_9 set value "minecraft:string"
+
+# 84 刷子
+execute if score type craftle_table matches 84 run data modify storage craftle:answer item_ans set value "刷子"
+execute if score type craftle_table matches 84 run data modify storage craftle:answer craft_2 set value "minecraft:feather"
+execute if score type craftle_table matches 84 run data modify storage craftle:answer craft_5 set value "minecraft:copper_ingot"
+execute if score type craftle_table matches 84 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+
+# 85 盾
+execute if score type craftle_table matches 85 run data modify storage craftle:answer item_ans set value "盾"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_1 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_2 set value "minecraft:iron_ingot"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_3 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_4 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_5 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_6 set value "minecraft:oak_planks"
+execute if score type craftle_table matches 85 run data modify storage craftle:answer craft_8 set value "minecraft:oak_planks"
+
+# 86 弓
+execute if score type craftle_table matches 86 run data modify storage craftle:answer item_ans set value "弓"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_3 set value "minecraft:string"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_4 set value "minecraft:stick"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_6 set value "minecraft:string"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_8 set value "minecraft:stick"
+execute if score type craftle_table matches 86 run data modify storage craftle:answer craft_9 set value "minecraft:string"
+
+# 87 箭
+execute if score type craftle_table matches 87 run data modify storage craftle:answer item_ans set value "箭"
+execute if score type craftle_table matches 87 run data modify storage craftle:answer craft_2 set value "minecraft:flint"
+execute if score type craftle_table matches 87 run data modify storage craftle:answer craft_5 set value "minecraft:stick"
+execute if score type craftle_table matches 87 run data modify storage craftle:answer craft_8 set value "minecraft:feather"
+
+# 88 光灵箭
+execute if score type craftle_table matches 88 run data modify storage craftle:answer item_ans set value "光灵箭"
+execute if score type craftle_table matches 88 run data modify storage craftle:answer craft_2 set value "minecraft:glowstone_dust"
+execute if score type craftle_table matches 88 run data modify storage craftle:answer craft_4 set value "minecraft:glowstone_dust"
+execute if score type craftle_table matches 88 run data modify storage craftle:answer craft_5 set value "minecraft:arrow"
+execute if score type craftle_table matches 88 run data modify storage craftle:answer craft_6 set value "minecraft:glowstone_dust"
+execute if score type craftle_table matches 88 run data modify storage craftle:answer craft_8 set value "minecraft:glowstone_dust"
+
+# 89 闪烁的西瓜片
+execute if score type craftle_table matches 89 run data modify storage craftle:answer item_ans set value "闪烁的西瓜片"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_1 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_2 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_3 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_4 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_5 set value "minecraft:melon_slice"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_6 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_7 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_8 set value "minecraft:gold_nugget"
+execute if score type craftle_table matches 89 run data modify storage craftle:answer craft_9 set value "minecraft:gold_nugget"
+
+# 90 发酵蜘蛛眼
+execute if score type craftle_table matches 90 run data modify storage craftle:answer item_ans set value "发酵蜘蛛眼"
+execute if score type craftle_table matches 90 run data modify storage craftle:answer craft_4 set value "minecraft:brown_mushroom"
+execute if score type craftle_table matches 90 run data modify storage craftle:answer craft_5 set value "minecraft:sugar"
+execute if score type craftle_table matches 90 run data modify storage craftle:answer craft_8 set value "minecraft:spider_eye"
+
+# 91 酿造台
+execute if score type craftle_table matches 91 run data modify storage craftle:answer item_ans set value "酿造台"
+execute if score type craftle_table matches 91 run data modify storage craftle:answer craft_5 set value "minecraft:blaze_rod"
+execute if score type craftle_table matches 91 run data modify storage craftle:answer craft_7 set value "minecraft:cobblestone"
+execute if score type craftle_table matches 91 run data modify storage craftle:answer craft_8 set value "minecraft:cobblestone"
+execute if score type craftle_table matches 91 run data modify storage craftle:answer craft_9 set value "minecraft:cobblestone"
 
 #如果配方对应位置为空，则不用写
 #execute if score type craftle_table matches - run data modify storage craftle:answer item_ans set value "物品名"
