@@ -464,15 +464,15 @@ execute if score type craftle_table matches 42 run data modify storage craftle:a
 
 #铜灯笼
 execute if score type craftle_table matches 43 run data modify storage craftle:answer item_ans set value "铜灯笼"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_1 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_2 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_3 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_4 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_5 set value "minecraft:coppper_torch"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_6 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_7 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_8 set value "minecraft:coppper_nugget"
-execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_9 set value "minecraft:coppper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_1 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_2 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_3 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_4 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_5 set value "minecraft:copper_torch"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_6 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_7 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_8 set value "minecraft:copper_nugget"
+execute if score type craftle_table matches 43 run data modify storage craftle:answer craft_9 set value "minecraft:copper_nugget"
 
 #灵魂灯笼
 execute if score type craftle_table matches 44 run data modify storage craftle:answer item_ans set value "灵魂灯笼"
