@@ -10,10 +10,10 @@ tellraw @a [{"text":"§6§lCraftle §r- §ePRE PROCESS LOADING","bold":true}]
 execute unless entity @a run schedule function craftle:pre_load_process 1s
 
 
-#此处数字为全局变量，仅需更改此处即可更改随机列表长度 如果你添加了配方，请将此score数字改为你添加后的总配方数
+#This number is a global variable, only need to change it here to modify the random list length. If you add recipes, please change this score number to the total number of recipes after adding
 scoreboard players set answer_num random_store 101
 
-#+1别动，这是神奇代码
+#+1 Don't touch this, it's magic code
 scoreboard players add @a[tag=random] random_store 1
 
 tag @a remove random
