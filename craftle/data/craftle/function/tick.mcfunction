@@ -55,6 +55,8 @@ tag @a[team=blue] add blue
 tag @a[team=] remove blue
 tag @a[team=] remove red
 
+gamemode survival @a[tag=gamer]
+
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]

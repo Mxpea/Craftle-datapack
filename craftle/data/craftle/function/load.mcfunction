@@ -1,7 +1,7 @@
 
 execute if score answer_num random_store matches ..0 run function craftle:pre_load_process
 execute if score answer_num random_store matches ..0 run return 1
-
+advancement revoke @a everything
 
 scoreboard objectives remove craftle_DISCOUNT
 
