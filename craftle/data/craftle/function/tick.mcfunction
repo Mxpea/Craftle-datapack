@@ -64,6 +64,7 @@ execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
+execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§lGame Start!","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §eTip: Look straight up (90 degrees) and sneak to enable guess submission!"}
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> Also... remember to use oak for all wood types and white for all dyed items awa"}
