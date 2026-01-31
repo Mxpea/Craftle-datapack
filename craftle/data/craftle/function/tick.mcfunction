@@ -58,6 +58,7 @@ tag @a[team=] remove red
 gamemode survival @a[tag=gamer]
 
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
+execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
