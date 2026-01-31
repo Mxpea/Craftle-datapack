@@ -16,8 +16,8 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 #Piston Note Block Observer TNT Scaffolding Jukebox Armor Stand Ender Chest Redstone Comparator Redstone Lamp Grindstone Enchanting Table Stonecutter Lectern Fletching Table Smithing Table Cartography Table Loom Respawn Anchor Lodestone
 #Smoker Blast Furnace Anvil Compass Clock Rail Powered Rail Detector Rail Activator Rail White Wool Painting Item Frame White Banner Tinted Glass End Crystal Barrel Lantern Campfire Soul Campfire (Soul Sand) Hanging Oak Sign Chiseled Copper
 #Honeycomb Chiseled Bookshelf Copper Lantern Soul Lantern Hopper Crafter Cake Golden Apple Golden Carrot Bookshelf Stone Bricks Jack o'Lantern White Stained Glass Diorite Coarse Dirt White Terracotta White Bed Oak Sign White Glass Pane Oak Fence Nether Brick Fence
-#Copper Chain Iron Chain Candle Soul Torch Copper Torch Oak Fence Gate Redstone Repeater Tripwire Hook Dropper Dispenser Daylight Detector Target Calibrated Sculk Sensor Mushroom Stew Cookie Pumpkin Pie Beetroot Soup Rabbit Stew Honey Bottle Lead
-#Spyglass Fishing Rod Brush Shield Bow Arrow Spectral Arrow Glistering Melon Slice Fermented Spider Eye Brewing Stand Cauldron Book Empty Map Fire Charge Book and Quill Composter Bundle White Horse Armor Netherite Ingot Andesite
+#Iron Chain Candle Soul Torch Copper Torch Oak Fence Gate Redstone Repeater Tripwire Hook Dropper Dispenser Daylight Detector Target Calibrated Sculk Sensor Mushroom Stew Cookie Pumpkin Pie Beetroot Soup Rabbit Stew Honey Bottle Lead
+#Spyglass Fishing Rod Brush Shield Bow Arrow Spectral Arrow Glistering Melon Slice Fermented Spider Eye Brewing Stand Cauldron Book Empty Map Fire Charge Book and Quill Composter Bundle Leather Horse Armor Netherite Ingot Andesite
 
 #Crossbow
 execute if score type craftle_table matches 0 run data modify storage craftle:answer item_ans set value "Crossbow"
@@ -661,13 +661,13 @@ execute if score type craftle_table matches 62 run data modify storage craftle:a
 execute if score type craftle_table matches 62 run data modify storage craftle:answer craft_8 set value "minecraft:copper_nugget"
 
 # 63 铁链（Chain）
-execute if score type craftle_table matches 63 run data modify storage craftle:answer item_ans set value "Chain"
+execute if score type craftle_table matches 63 run data modify storage craftle:answer item_ans set value "Iron Chain"
 execute if score type craftle_table matches 63 run data modify storage craftle:answer craft_2 set value "minecraft:iron_nugget"
 execute if score type craftle_table matches 63 run data modify storage craftle:answer craft_5 set value "minecraft:iron_ingot"
 execute if score type craftle_table matches 63 run data modify storage craftle:answer craft_8 set value "minecraft:iron_nugget"
 
 # 64 蜡烛（Candle）
-execute if score type craftle_table matches 64 run data modify storage craftle:answer item_ans set value "Candle"
+execute if score type craftle_table matches 64 run data modify storage craftle:answer item_ans set value "White Candle"
 execute if score type craftle_table matches 64 run data modify storage craftle:answer craft_2 set value "minecraft:string"
 execute if score type craftle_table matches 64 run data modify storage craftle:answer craft_5 set value "minecraft:bee_wax"
 
@@ -944,7 +944,7 @@ execute if score type craftle_table matches 98 run data modify storage craftle:a
 execute if score type craftle_table matches 98 run data modify storage craftle:answer craft_5 set value "minecraft:leather"
 
 # 99 白色挽具
-execute if score type craftle_table matches 99 run data modify storage craftle:answer item_ans set value "White Horse Armor"
+execute if score type craftle_table matches 99 run data modify storage craftle:answer item_ans set value "Leather Horse Armor"
 execute if score type craftle_table matches 99 run data modify storage craftle:answer craft_1 set value "minecraft:leather"
 execute if score type craftle_table matches 99 run data modify storage craftle:answer craft_2 set value "minecraft:leather"
 execute if score type craftle_table matches 99 run data modify storage craftle:answer craft_3 set value "minecraft:leather"
