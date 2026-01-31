@@ -1,6 +1,6 @@
 tellraw @a [{"text":"======== Credits ========","color":"yellow"}]
 tellraw @a [{"text":"   [Datapack Development]","color":"blue"}]
-tellraw @a [{player:{name:"Mxpea38488"}},{"text":"-Aurelith_FW/Mxpea","color":"green"},{text":"  Main Datapack Creation"}]
+tellraw @a [{player:{name:"Mxpea38488"}},{"text":"-Aurelith_FW/Mxpea","color":"green"},{text:"  Main Datapack Creation"}]
 tellraw @a [{player:{name:"Nekoviet13"}},{"text":"-Nekoviet13","color":"green"},{text:"  Recipe Selection"}]
 tellraw @a [{player:{name:"this_hacker"}},{"text":"-this_hacker","color":"green"},{text:"  Recipe Selection"}]
 tellraw @a [{"text":"   [Resource Pack Creation]","color":"blue"}]
