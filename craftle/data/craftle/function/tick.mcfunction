@@ -2,6 +2,7 @@ scoreboard players enable @a craftle_settings
 recipe take @a *
 execute as @a at @s run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace minecraft:barrier
 kill @e[type=item,nbt={Item:{id:"minecraft:barrier"}}]
+execute unless entity @a[tag=gamer] run title @a[tag=!gamer] actionbar {"text":"垂直向上看并潜行以重新打开游戏面板","color":"yellow"}
 
 #debug pannel
 tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:" DEBUG ",color:"yellow"},{text:"==========" ,color:"gold"}]
@@ -17,7 +18,6 @@ tag @a remove debug
 execute as @a[tag=gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score @s craftle_DISCOUNT matches 0 run scoreboard players set @s craftle_DISCOUNT 300
 execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_ans
 tellraw @a[tag=pre_check_ans] [{"text":"[提交猜测]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{text:"      注意,提交完后全队会有两分钟的冷却时间",color:"gray"}]
-#tellraw @a[tag=pre_check_ans] [{"text":"[获取合成空位]","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 199"}},{text:"      使用它代替合成表为空的部分，直接扔出会消失",color:"gray"}]
 execute store result bossbar craftle:red_cooldown value run scoreboard players get red_cooldown craftle_DISCOUNT
 execute store result bossbar craftle:blue_cooldown value run scoreboard players get blue_cooldown craftle_DISCOUNT
 execute if score red_cooldown craftle_DISCOUNT matches 1.. run bossbar set craftle:red_cooldown visible true
@@ -35,6 +35,8 @@ bossbar set craftle:red_cooldown players @a[team=red]
 
 
 #gaming pannel
+execute as @a[tag=!gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score board craftle_DISCOUNT matches 0 run scoreboard players set board craftle_DISCOUNT 30
+execute if score board craftle_DISCOUNT matches 30 run tag @a[tag=!gamer] add gaming
 tellraw @a[tag=gaming] ""
 tellraw @a[tag=gaming] ""
 tellraw @a[tag=gaming] ""
@@ -59,6 +61,8 @@ gamemode survival @a[tag=gamer]
 
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
+execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
+execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
@@ -135,8 +139,8 @@ execute if score hint_discount craftle_DISCOUNT matches 200 run playsound entity
 execute if score hint_discount craftle_DISCOUNT matches 200 run tellraw @a {text:"§a§l[Craftle] §r- §e十秒后给予提示！"}
 
 execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
-execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:answer
+execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 
 #last process
 clear @a minecraft:barrier
@@ -152,9 +156,12 @@ execute as @a[tag=check_ans] unless items entity @s container.29 * run item repl
 execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
 tag @a[team=red] remove blue
 tag @a[team=blue] remove red
+execute as @a[tag=gamer] run gamemode spectator @a[tag=!gamer]
+execute as @a[tag=gamer] run title @a[gamemode=spectator] subtitle {"text":"您现在是旁观者模式，请耐心等待游戏结束。","color":"red"}
 
 #DISCOUNT
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
+execute if score board craftle_DISCOUNT matches 1.. run scoreboard players remove board craftle_DISCOUNT 1
 execute if score red_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove red_cooldown craftle_DISCOUNT 1
 execute if score blue_cooldown craftle_DISCOUNT matches 1.. run scoreboard players remove blue_cooldown craftle_DISCOUNT 1
 execute as @a if score @s craftle_DISCOUNT matches 1.. run scoreboard players remove @s craftle_DISCOUNT 1
