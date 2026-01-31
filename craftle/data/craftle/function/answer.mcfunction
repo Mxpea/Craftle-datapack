@@ -1,4 +1,4 @@
-#如果你要自己添加配方，复制下方的一串并且吧数字改成你想要的配方编号即可，此外，将pre_load_process.mcfunction中的数字也改成你添加后的总配方数
+#If you want to add your own recipe, copy the string below and change the number to your desired recipe number. Also, change the number in pre_load_process.mcfunction to the total number of recipes after adding
 
 #reset answers
 data modify storage craftle:answer craft_1 set value "minecraft:barrier"
@@ -11,15 +11,15 @@ data modify storage craftle:answer craft_7 set value "minecraft:barrier"
 data modify storage craftle:answer craft_8 set value "minecraft:barrier"
 data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 
-#统计配方列表 一行20个
-#弩
-#活塞 音符盒 侦测器 TNT 脚手架 唱片机 盔甲架 末影箱 红石比较器 红石灯 砂轮 附魔台 切石机 讲台 制箭台 锻造台 制图台 织布机 重生锚 磁石
-#烟熏炉 高炉 铁砧 指南针 钟 铁轨 充能铁轨 探测铁轨 激活铁轨 白色羊毛画 物品展示框 白色旗帜 遮光玻璃 末地水晶 木桶 灯笼 煤炭营火 灵魂营火（灵魂沙） 悬挂式橡木告示牌 铜箱子
-#蜜箱 展示架 铜灯笼 灵魂灯笼 漏斗 合成器 蛋糕 金苹果 金胡萝卜 书架 石砖 南瓜灯 白色染色玻璃 闪长岩 砂土 白色陶瓦 白色床 橡木告示牌 白色玻璃板 木栅栏 下界砖栅栏
-#铜链 铁链 蜡烛 灵魂火把 铜火把 橡木栅栏门 红石中继器 绊线钩 投掷器 发射器 阳光探测器 标靶 校频幽匿感测体 蘑菇煲 曲奇 南瓜派 甜菜汤 兔肉煲 蜂蜜瓶 栓绳
-#望远镜 钓鱼竿 刷子 盾 弓 箭 光灵箭 闪烁的西瓜片 发酵蜘蛛眼 酿造台 炼药锅 书 空地图 火焰弹 书与笔 堆肥桶 收纳袋 白色挽具 下届合金锭 安山岩
+#Recipe list statistics - 20 per row
+#Crossbow
+#Piston Note Block Observer TNT Scaffolding Jukebox Armor Stand Ender Chest Redstone Comparator Redstone Lamp Grindstone Enchanting Table Stonecutter Lectern Fletching Table Smithing Table Cartography Table Loom Respawn Anchor Lodestone
+#Smoker Blast Furnace Anvil Compass Clock Rail Powered Rail Detector Rail Activator Rail White Wool Painting Item Frame White Banner Tinted Glass End Crystal Barrel Lantern Campfire Soul Campfire (Soul Sand) Hanging Oak Sign Chiseled Copper
+#Honeycomb Chiseled Bookshelf Copper Lantern Soul Lantern Hopper Crafter Cake Golden Apple Golden Carrot Bookshelf Stone Bricks Jack o'Lantern White Stained Glass Diorite Coarse Dirt White Terracotta White Bed Oak Sign White Glass Pane Oak Fence Nether Brick Fence
+#Copper Chain Iron Chain Candle Soul Torch Copper Torch Oak Fence Gate Redstone Repeater Tripwire Hook Dropper Dispenser Daylight Detector Target Calibrated Sculk Sensor Mushroom Stew Cookie Pumpkin Pie Beetroot Soup Rabbit Stew Honey Bottle Lead
+#Spyglass Fishing Rod Brush Shield Bow Arrow Spectral Arrow Glistering Melon Slice Fermented Spider Eye Brewing Stand Cauldron Book Empty Map Fire Charge Book and Quill Composter Bundle White Horse Armor Netherite Ingot Andesite
 
-#弩
+#Crossbow
 execute if score type craftle_table matches 0 run data modify storage craftle:answer item_ans set value "弩"
 execute if score type craftle_table matches 0 run data modify storage craftle:answer craft_1 set value "minecraft:stick"
 execute if score type craftle_table matches 0 run data modify storage craftle:answer craft_2 set value "minecraft:iron_ingot"

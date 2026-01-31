@@ -1,64 +1,64 @@
-# **CRAFTLE**  ~  一个仿WORDLE的MC小游戏
+# **CRAFTLE**  ~  A WORDLE-inspired Minecraft Mini-game
 
 <p align="center">
     <img width="690" src="web/craftle.png" alt="title">  
-</p
-这是一个类似于wordle的mc合成表小游戏
+</p>
+This is a Wordle-inspired Minecraft crafting recipe guessing game
 
-这里有：
+Features:
 
-* 类wordle的规则
-* 两个队伍之间的竞技内容
-* 即插即用的原版数据包体验
+* Wordle-style rules
+* Competitive gameplay between two teams
+* Plug-and-play vanilla datapack experience
 
-## 安装&游玩
+## Installation & Playing
 
-推荐使用1.21.11版本游玩此数据包
+Recommended version: 1.21.11
 
-你只需要:
+Steps:
 
-1. 新建一个世界
-2. 打开存档文件夹，找到你新建的世界并打开
-3. 将craftle-datapack放入世界文件夹的datapacks文件夹内
-4. 回到游戏并输入/reload（需要开启作弊）或是退出重进世界
-5. 安装提供的资源包（其实不装也行，看你心情了）
-6. 你的聊天栏应该会自动弹出游戏选择，按t打开聊天栏并使用鼠标点击即可
+1. Create a new world
+2. Open the save folder, find and open your newly created world
+3. Place the craftle-datapack into the world's datapacks folder
+4. Return to the game and type /reload (requires cheats) or exit and rejoin the world
+5. Install the provided resource pack (optional, but recommended)
+6. The game selection should automatically appear in your chat. Press T to open chat and click with your mouse to select
 
 
-## 规则
+## Rules
 
-相较于wordle的小字符大字典的形式，mc合成表无疑是元素多而合成表少的。
-所以我们对游戏规则做了改动，同时也使我们编写数据包工作量减小了一些
-~才不是懒呢~
+Unlike Wordle's small character set with a large dictionary, Minecraft crafting recipes have many elements but fewer recipes.
+We've modified the game rules accordingly, which also reduced our datapack workload
+~Definitely not because we're lazy~
 
-以下是与wordle规则相近的内容：
+Rules similar to Wordle:
 
-* 如果提交的物品在选定的合成表中存在且位置正确，将会输出绿色色块
-* 如果提交的物品在选定的合成表中存在但位置错误，将会输出黄色色块
-* 如果提交的物品在选定的合成表中不存在，将会输出红色色块
+* If a submitted item exists in the selected recipe and is in the correct position, a green block will be displayed
+* If a submitted item exists in the selected recipe but is in the wrong position, a yellow block will be displayed
+* If a submitted item does not exist in the selected recipe, a red block will be displayed
 
-以下是与wordle规则不同的内容:
+Differences from Wordle:
 
-* 黄色色块仅指示该物品存在且位置不对，并不会指示物品数量
-* 本游戏对玩家提交的内容不做限制，玩家可以提交非合成表内容，但答案一定是一个合成表
-* 对提交的次数不做限制，但同一队伍共用一个提交冷却 - 当前是**两分钟**
-* 所有玩家在生存模式下收集物品并进行猜测，先猜出合成表的队伍胜利
+* Yellow blocks only indicate that the item exists in the wrong position, they do not indicate item quantity
+* This game does not restrict player submissions - players can submit non-recipe items, but the answer is always a crafting recipe
+* There is no limit to submission attempts, but each team shares a submission cooldown - currently **two minutes**
+* All players gather items in survival mode and make guesses. The first team to guess the recipe correctly wins
 
-## 回报问题
+## Reporting Issues
 
-如果你在游玩中遇到了任何问题，欢迎在issue中向我汇报
+If you encounter any problems while playing, feel free to report them in the issues section
 
-## 技术性内容
+## Technical Details
 
-* 该数据包在1.21.11版本中编写，并且应该支持1.21.X的版本（this_hacker告诉你不支持，因为加了非常新的配方嘿嘿嘿）
-* 该数据包使用函数宏进行判断  ~写的非常石所以不建议参考~
-* 一个答案列表存储，你可以按照需求向里面添加新的合成表（或者只是随机的物品，甚至是其他模组中的物品！）该数据包应该会正常的处理这些数据
-* 一个伪随机列表，防止体验到重复合成表
+* This datapack was written for version 1.21.11 and should support 1.21.X versions (this_hacker says it doesn't support older versions because we added very new recipes hehe)
+* This datapack uses function macros for logic processing  ~Written very poorly, so don't recommend using as reference~
+* An answer list storage system - you can add new crafting recipes as needed (or just random items, even items from other mods!) The datapack should handle this data properly
+* A pseudo-random list to prevent experiencing duplicate recipes
 
-## 作者
+## Authors
 
-* Aurelith/Mxpea 负责了数据包所有逻辑的开发，以及材质包的绘制  
-  b站链接：https://space.bilibili.com/517011791
-* Nekoviet13 负责了配方的筛选和导入
-* this_hacker 负责了数据包部分逻辑开发的指导，负责了非常多配方的筛选和导入，提出了非常多建议，贡献巨大  （巨大在哪
-  b站链接：https://space.bilibili.com/526122347
+* Aurelith/Mxpea - Developed all datapack logic and created the resource pack  
+  Bilibili: https://space.bilibili.com/517011791
+* Nekoviet13 - Recipe selection and import
+* this_hacker - Guided some of the datapack logic development, helped with recipe selection and import extensively, provided numerous suggestions with significant contributions (How significant?  
+  Bilibili: https://space.bilibili.com/526122347

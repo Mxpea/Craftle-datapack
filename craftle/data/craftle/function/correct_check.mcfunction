@@ -1,11 +1,11 @@
 
 
-execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=red] run title @a title [{"text":"§l红队胜利！","underlined":true,"bold":true,color:"red"}]
-$execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=red] run title @a subtitle [{text:"游戏结束！答案是",color:"gold"},{text:"$(item_ans)",color:"green"},{text:"！",color:"gold"}]
+execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=red] run title @a title [{"text":"§lRed Team Wins!","underlined":true,"bold":true,color:"red"}]
+$execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=red] run title @a subtitle [{text:"Game Over! The answer was ",color:"gold"},{text:"$(item_ans)",color:"green"},{text:"!",color:"gold"}]
 execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=red] run tag @s add red_winner
 
-execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run title @a title [{"text":"§l蓝队胜利！","underlined":true,"bold":true,color:"blue"}]
-$execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run title @a subtitle [{text:"游戏结束！答案是",color:"gold"},{text:"$(item_ans)",color:"green"},{text:"！",color:"gold"}]
+execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run title @a title [{"text":"§lBlue Team Wins!","underlined":true,"bold":true,color:"blue"}]
+$execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run title @a subtitle [{text:"Game Over! The answer was ",color:"gold"},{text:"$(item_ans)",color:"green"},{text:"!",color:"gold"}]
 execute if score @a[tag=check_ans,limit=1] correct_times matches 9 if entity @s[team=blue] run tag @s add blue_winner
 
 
