@@ -11,7 +11,7 @@ execute unless entity @a run schedule function craftle:pre_load_process 1s
 
 
 #此处数字为全局变量，仅需更改此处即可更改随机列表长度 如果你添加了配方，请将此score数字改为你添加后的总配方数
-scoreboard players set answer_num random_store 101
+scoreboard players set answer_num random_store 104
 
 #+1别动，这是神奇代码
 scoreboard players add @a[tag=random] random_store 1
