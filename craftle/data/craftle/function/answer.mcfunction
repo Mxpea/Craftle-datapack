@@ -18,7 +18,7 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 #蜜箱 展示架 铜灯笼 灵魂灯笼 漏斗 合成器 蛋糕 金苹果 金胡萝卜 书架 石砖 南瓜灯 白色染色玻璃 闪长岩 砂土 白色陶瓦 白色床 橡木告示牌 白色玻璃板 木栅栏 下界砖栅栏
 #铜链 铁链 蜡烛 灵魂火把 铜火把 橡木栅栏门 红石中继器 绊线钩 投掷器 发射器 阳光探测器 标靶 校频幽匿感测体 蘑菇煲 曲奇 南瓜派 甜菜汤 兔肉煲 蜂蜜瓶 栓绳
 #望远镜 钓鱼竿 刷子 盾 弓 箭 光灵箭 闪烁的西瓜片 发酵蜘蛛眼 酿造台 炼药锅 书 空地图 火焰弹 书与笔 堆肥桶 收纳袋 白色挽具 下届合金锭 安山岩
-#饰纹陶罐 下界合金升级
+#饰纹陶罐 下界合金升级 狼铠
 
 #弩
 execute if score type craftle_table matches 0 run data modify storage craftle:answer item_ans set value "弩"
@@ -987,6 +987,18 @@ execute if score type craftle_table matches 103 run data modify storage craftle:
 execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_7 set value "minecraft:diamond"
 execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_8 set value "minecraft:diamond"
 execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_9 set value "minecraft:diamond"
+
+# 狼铠
+execute if score type craftle_table matches 104 run data modify storage craftle:answer item_ans set value "狼铠"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_1 set value "minecraft:armadillo_scute"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_4 set value "minecraft:armadillo_scute"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_5 set value "minecraft:armadillo_scute"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_6 set value "minecraft:armadillo_scute"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_7 set value "minecraft:armadillo_scute"
+execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_9 set value "minecraft:armadillo_scute"
+
+
+
 
 #如果配方对应位置为空，则不用写
 #execute if score type craftle_table matches - run data modify storage craftle:answer item_ans set value "物品名"
