@@ -16,5 +16,5 @@ execute as @a if score @s correct_times matches 9 run execute as @a at @s run pl
 
 tag @a remove red_winner
 tag @a remove blue_winner
-execute as @a if score @s correct_times matches 9 run schedule function craftle:load 3s
+execute as @a if score @s correct_times matches 9 run schedule function craftle:prepare/load 3s
 scoreboard players set @a correct_times 0

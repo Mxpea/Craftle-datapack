@@ -1,5 +1,5 @@
 {
 	"values": [
-		"craftle:pre_load_process"
+		"craftle:prepare/pre_load_process"
 	]
 } 
