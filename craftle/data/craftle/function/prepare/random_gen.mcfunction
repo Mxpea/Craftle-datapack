@@ -6,4 +6,4 @@ scoreboard players remove answer_num random_store 1
 execute store result storage craftle:temp ran_range int 1 run scoreboard players get answer_num random_store
 
 #运行选取函数
-function craftle:random_pick with storage craftle:temp
+function craftle:prepare/random_pick with storage craftle:temp
