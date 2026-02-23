@@ -16,3 +16,8 @@ tag @a remove red_winner
 tag @a remove blue_winner
 execute as @a if score @s correct_times matches 9 run schedule function craftle:prepare/load 3s
 scoreboard players set @a correct_times 0
+
+execute as @a if score @s correct_times matches 9 run fill -5 316 -5 5 319 5 minecraft:glass hollow
+execute as @a if score @s correct_times matches 9 run fill -4 319 -4 4 319 4 minecraft:air
+execute as @a if score @s correct_times matches 9 run fill -5 316 -5 5 316 5 minecraft:oak_planks
+execute as @a if score @s correct_times matches 9 run tp @a 0 317 0

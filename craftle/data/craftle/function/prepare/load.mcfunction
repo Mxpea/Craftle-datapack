@@ -71,13 +71,18 @@ tag @a remove random
 gamemode adventure @a
 gamerule pvp false
 gamerule advance_time false
-gamerule keep_inventory true
+gamerule keep_inventory false
 difficulty peaceful
 
 tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏  by §aAurelith/Mxpea","bold":true}]
 
 #给所有在线玩家添加gaming标签
 tag @a add gaming
+
+fill -5 316 -5 5 319 5 minecraft:glass hollow
+fill -4 319 -4 4 319 4 minecraft:air
+fill -5 316 -5 5 316 5 minecraft:oak_planks
+tp @a 0 317 0
 
 #debug
 #tag @a add debug
