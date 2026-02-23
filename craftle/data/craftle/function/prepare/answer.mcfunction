@@ -1,6 +1,7 @@
-#如果你要自己添加配方，复制下方的一串并且吧数字改成你想要的配方编号即可，此外，将pre_load_process.mcfunction中的数字也改成你添加后的总配方数
+#如果你要自己添加配方，复制下方的一串并且吧数字改成你想要的配方编号即可，此外，将prepare文件夹中的pre_load_process.mcfunction中的数字也改成你添加后的总配方数
+#请不要忘记，要不然你添加的配方将无法被选中
 
-#初始化9个栏位的数据
+#先将这9个位置的物品设为barrier，表示空位
 data modify storage craftle:answer craft_1 set value "minecraft:barrier"
 data modify storage craftle:answer craft_2 set value "minecraft:barrier"
 data modify storage craftle:answer craft_3 set value "minecraft:barrier"
