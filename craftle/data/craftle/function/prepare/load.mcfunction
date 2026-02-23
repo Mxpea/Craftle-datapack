@@ -41,12 +41,16 @@ time set day
 scoreboard objectives setdisplay sidebar craftle_scores
 
 #初始化记分板
+#各队伍冷却时间
 scoreboard players set red_cooldown craftle_DISCOUNT 0
 scoreboard players set blue_cooldown craftle_DISCOUNT 0
+#玩家专属计数，用于很多功能
 scoreboard players set @a craftle_DISCOUNT 0
 scoreboard players set @a sneak_time 0
 scoreboard players set @a correct_times 0
+#提示时间计数
 scoreboard players set hint_discount craftle_DISCOUNT 0
+
 scoreboard players set board craftle_DISCOUNT 0
 
 #以下指令自动运行三个函数中的代码，最后选好配方并储存在craftle:answer中
@@ -74,6 +78,11 @@ tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏 
 
 #给所有在线玩家添加gaming标签
 tag @a add gaming
+tp @a 0 317.5 0
+fill -5 316 -5 5 319 5 minecraft:glass hollow
+fill -4 319 -4 4 319 4 minecraft:air
+fill -5 316 -5 5 316 5 minecraft:oak_planks
+
 
 #debug
 #tag @a add debug

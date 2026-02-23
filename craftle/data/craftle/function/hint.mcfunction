@@ -1,3 +1,4 @@
+#随机选择一个位置提示
 execute store result score ran_hint craftle_table run random value 1..9
 tellraw @a [{text:"[craftle] - ",color:"gold"},{text:"barrier是空位，表示这个地方没有物品"}]
 $execute if score ran_hint craftle_table matches 1 run tellraw @a [{text:"[craftle] - ",color:"gold"},{text:"此物品存在于合成表左上角:"},{text:"$(craft_1)",color:"green"}]
