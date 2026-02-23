@@ -1,5 +1,6 @@
 #让每个玩家都能点击左下角
 scoreboard players enable @a craftle_settings
+scoreboard players enable @a craftle_settings
 #锁定玩家配方,mx干的，真是太可恶了
 recipe take @a *
 #给未在游戏中的玩家显示面板
@@ -70,7 +71,7 @@ execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill -5 316 -5 5 319 5 minecraft:air
-execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 100 100 true @a
+execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
@@ -133,6 +134,11 @@ execute if score intro craftle_DISCOUNT matches 1400 run tellraw @a {text:"<Aure
 execute if score intro craftle_DISCOUNT matches 1360 run tellraw @a {text:"<Aurelith_FW> 但是要记住....提交之后会有一段冷却时间w"}
 execute if score intro craftle_DISCOUNT matches 1320 run tellraw @a {text:"<Aurelith_FW> 然后....记得玩的开心awa"}
 execute if score intro craftle_DISCOUNT matches 1300 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
+execute if score intro craftle_DISCOUNT matches 1280 run tellraw @a [{text:"this_hacker加入了游戏",color:"yellow"}]
+execute if score intro craftle_DISCOUNT matches 1260 run tellraw @a [{text:"<this_hacker> 顺便一提，游戏已开启死亡不掉落"}]
+execute if score intro craftle_DISCOUNT matches 1240 run tellraw @a [{text:"<this_hacker> 配方已被mx禁用，真是太可恶了！"}]
+execute if score intro craftle_DISCOUNT matches 1220 run tellraw @a [{text:"<this_hacker> 嘿嘿！"}]
+execute if score intro craftle_DISCOUNT matches 1200 run tellraw @a [{text:"this_hacker退出了游戏",color:"yellow"}]
 
 #hint
 execute if score hint_discount craftle_DISCOUNT matches 6000 run playsound entity.experience_orb.pickup player @a
