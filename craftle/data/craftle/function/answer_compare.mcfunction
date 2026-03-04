@@ -1,4 +1,4 @@
-#先把9个答案都设为红色
+#Set all 9 answers to red first
 data modify storage craftle:answer display11 set value "red"
 data modify storage craftle:answer display12 set value "red"
 data modify storage craftle:answer display13 set value "red"
@@ -8,18 +8,18 @@ data modify storage craftle:answer display23 set value "red"
 data modify storage craftle:answer display31 set value "red"
 data modify storage craftle:answer display32 set value "red"
 data modify storage craftle:answer display33 set value "red"
-#获取队伍信息
+#Get team info
 data modify storage craftle:answer teams set from entity @a[tag=check_ans,limit=1] Tags[0]
-#将正确答案数量重置为0
+#Reset correct answer count to 0
 scoreboard players set @a[tag=check_ans] correct_times 0
 
-#获取当前物品标签类型
+#Get current item tag type
 # 1 - minecraft:logs
 # 2 - minecraft:planks
 # 3 - minecraft:wool
 # 4 - craftle:dye
 
-#将每个物品分别与其他8个位置物品比较，如果有则设为黄色
+#Compare each item with the other 8 slots; if present set to yellow
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_1) run data modify storage craftle:answer display12 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_1) run data modify storage craftle:answer display13 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.18 $(craft_1) run data modify storage craftle:answer display21 set value "yellow"
@@ -101,7 +101,7 @@ $execute as @a[tag=check_ans] if items entity @s container.20 $(craft_9) run dat
 $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_9) run data modify storage craftle:answer display31 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_9) run data modify storage craftle:answer display32 set value "yellow"
 
-#再将每个物品与对应位置的物品比较，如果相同则设为绿色
+#Compare each item with its corresponding slot; if same set to green
 $execute as @a[tag=check_ans] if items entity @s container.9 $(craft_1) run data modify storage craftle:answer display11 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_2) run data modify storage craftle:answer display12 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_3) run data modify storage craftle:answer display13 set value "green"
@@ -112,7 +112,7 @@ $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_7) run dat
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_8) run data modify storage craftle:answer display32 set value "green"
 $execute as @a[tag=check_ans] if items entity @s container.29 $(craft_9) run data modify storage craftle:answer display33 set value "green"
 
-#累加正确的答案数量，9为胜利条件
+#Add up correct answers; 9 is the win condition
 $execute as @a[tag=check_ans] if items entity @s container.9 $(craft_1) run scoreboard players add @s correct_times 1
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_2) run scoreboard players add @s correct_times 1
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_3) run scoreboard players add @s correct_times 1
@@ -122,7 +122,7 @@ $execute as @a[tag=check_ans] if items entity @s container.20 $(craft_6) run sco
 $execute as @a[tag=check_ans] if items entity @s container.27 $(craft_7) run scoreboard players add @s correct_times 1
 $execute as @a[tag=check_ans] if items entity @s container.28 $(craft_8) run scoreboard players add @s correct_times 1
 $execute as @a[tag=check_ans] if items entity @s container.29 $(craft_9) run scoreboard players add @s correct_times 1
-#显示对比结果
+#Show comparison result
 function craftle:itemoutput with storage craftle:answer
-#检查是否胜利
+#Check for victory
 function craftle:correct_check with storage craftle:answer

@@ -1,6 +1,6 @@
-#根据ran_val里的数从选取对应配方
+#Pick the corresponding recipe based on ran_val
 $execute store result score type craftle_table run data get storage craftle:temp random_list[$(ran_val)]
-#从总配方库中删除此配方
+#Remove this recipe from the pool
 $data remove storage craftle:temp random_list[$(ran_val)]
-#运行函数
+#Run the function
 function craftle:prepare/answer
