@@ -5,6 +5,5 @@ execute if score @a[tag=random,limit=1] random_store matches 1.. run scoreboard 
 execute if score @a[tag=random,limit=1] random_store matches 1.. run function craftle:prepare/random_list_load
 execute if score @a[tag=random,limit=1] random_store matches 1.. run return 1
 #循环结束
-execute if score @a[tag=random,limit=1] random_store matches 0 run function craftle:prepare/load
 execute if score @a[tag=random,limit=1] random_store matches 0 run scoreboard players remove @a[tag=random,limit=1] random_store 1
 

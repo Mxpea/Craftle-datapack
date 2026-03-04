@@ -24,3 +24,4 @@ execute store result storage craftle:temp ran_range int 1 run scoreboard players
 
 scoreboard players operation @a[tag=random] random_store = answer_num random_store
 function craftle:prepare/random_list_load
+function craftle:prepare/load
