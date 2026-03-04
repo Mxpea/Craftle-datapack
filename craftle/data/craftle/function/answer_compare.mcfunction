@@ -13,6 +13,16 @@ data modify storage craftle:answer teams set from entity @a[tag=check_ans,limit=
 #将正确答案数量重置为0
 scoreboard players set @a[tag=check_ans] correct_times 0
 
+#获取当前物品标签类型
+# 1 - minecraft:logs
+# 2 - minecraft:planks
+# 3 - minecraft:wool
+# 4 - craftle:dye
+execute if score type tag_type matches 1 run data modify storage craftle:temp tag set value "#minecraft:logs"
+execute if score type tag_type matches 2 run data modify storage craftle:temp tag set value "#minecraft:planks"
+execute if score type tag_type matches 3 run data modify storage craftle:temp tag set value "#minecraft:wool"
+execute if score type tag_type matches 4 run data modify storage craftle:temp tag set value "#craftle:dye"
+
 #将每个物品分别与其他8个位置物品比较，如果有则设为黄色
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_1) run data modify storage craftle:answer display12 set value "yellow"
 $execute as @a[tag=check_ans] if items entity @s container.11 $(craft_1) run data modify storage craftle:answer display13 set value "yellow"
