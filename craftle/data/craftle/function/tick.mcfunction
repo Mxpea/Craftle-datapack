@@ -73,6 +73,7 @@ execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 run fill -5 316 -5 5 319 5 minecraft:air
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
+execute as @a if score @s craftle_settings matches 1 run scoreboard players set gaming craftle_settings 1
 execute as @a if score @s craftle_settings matches 1 run title @a title [{"text":"§l游戏开始！","underlined":true,"bold":true,"color":"gold"}]
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"§a§l[Craftle] §r- §e提示:垂直抬头90度并潜行以启用提交猜测功能！"}
 execute as @a if score @s craftle_settings matches 1 run tellraw @a {"text":"<Aurelith_FW> 配方书被我吃掉啦...好吃..."}
@@ -179,10 +180,10 @@ execute as @a[tag=check_ans] run function craftle:answer_compare with storage cr
 tag @a[team=red] remove blue
 tag @a[team=blue] remove red
 #未加入游戏的玩家保持在旁观者模式
-execute as @a[tag=gamer] run gamemode spectator @a[tag=!gamer]
-execute as @a[tag=gamer] run title @a[gamemode=spectator] subtitle {"text":"您现在是旁观者模式，请耐心等待游戏结束。","color":"red"}
+execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run gamemode spectator @a[tag=!gamer]
+execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run title @a[gamemode=spectator] subtitle {"text":"您现在是旁观者模式，请耐心等待游戏结束。","color":"red"}
 #自动进入大厅
-execute as @a[tag=!gamer,tag=!worldset] at @s if entity @s[y=-64,dy=379] if entity @s[gamemode=!spectator] run tp 0 317 0
+execute as @a[tag=!gamer,tag=!worldset] at @s if entity @s[y=-64,dy=379] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run tp 0 317 0
 
 #DISCOUNT，所有变量自减
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1
@@ -199,6 +200,3 @@ tag @a remove debug
 tag @a remove gaming
 tag @a remove pre_check_ans
 tag @a remove check_ans
-
-
-
