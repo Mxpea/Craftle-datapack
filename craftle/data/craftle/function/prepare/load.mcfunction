@@ -83,6 +83,7 @@ fill -5 316 -5 5 319 5 minecraft:glass hollow
 fill -4 319 -4 4 319 4 minecraft:air
 fill -5 316 -5 5 316 5 minecraft:oak_planks
 
+scoreboard players set gaming craftle_settings 0
 
 #debug
 #tag @a add debug
