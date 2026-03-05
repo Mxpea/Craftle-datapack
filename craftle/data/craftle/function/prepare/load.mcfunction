@@ -7,6 +7,8 @@ advancement revoke @a everything
 #移除旧记分板
 scoreboard objectives remove craftle_DISCOUNT
 
+kill @e[type=minecraft:item_display]
+
 #添加记分板
 scoreboard objectives add craftle_testitem dummy
 scoreboard objectives add craftle_table dummy
