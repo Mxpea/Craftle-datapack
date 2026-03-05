@@ -986,27 +986,6 @@ execute if score type craftle_table matches 102 run data modify storage craftle:
 execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_6 set value "minecraft:brick"
 execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_8 set value "minecraft:brick"
 
-#下界合金升级
-execute if score type craftle_table matches 103 run data modify storage craftle:answer item_ans set value "下界合金升级"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_1 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_2 set value "minecraft:netherite_upgrade_smithing_template"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_3 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_4 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_5 set value "minecraft:netherrack"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_6 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_7 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_8 set value "minecraft:diamond"
-execute if score type craftle_table matches 103 run data modify storage craftle:answer craft_9 set value "minecraft:diamond"
-
-# 狼铠
-execute if score type craftle_table matches 104 run data modify storage craftle:answer item_ans set value "狼铠"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_1 set value "minecraft:armadillo_scute"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_4 set value "minecraft:armadillo_scute"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_5 set value "minecraft:armadillo_scute"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_6 set value "minecraft:armadillo_scute"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_7 set value "minecraft:armadillo_scute"
-execute if score type craftle_table matches 104 run data modify storage craftle:answer craft_9 set value "minecraft:armadillo_scute"
-
 
 
 
