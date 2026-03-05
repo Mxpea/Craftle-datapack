@@ -76,6 +76,7 @@ execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
+execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill 16 306 16 0 300 0 air
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
