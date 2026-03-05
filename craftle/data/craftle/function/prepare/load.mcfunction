@@ -67,6 +67,8 @@ tag @a remove blue
 tag @a remove red
 tag @a remove random
 
+clear @a
+
 #调整基础游戏设定，调整为等待游戏开始状态
 gamemode adventure @a
 gamerule pvp false
@@ -74,14 +76,12 @@ gamerule advance_time false
 gamerule keep_inventory true
 difficulty peaceful
 
-tellraw @a [{"text":"§6§lCraftle §r- §e灵感来自wordle的合成小游戏  by §aAurelith/Mxpea","bold":true}]
+tellraw @a [{translate:"load.message","bold":true}]
 
 #给所有在线玩家添加gaming标签
 tag @a add gaming
-tp @a 0 317.5 0
-fill -5 316 -5 5 319 5 minecraft:glass hollow
-fill -4 319 -4 4 319 4 minecraft:air
-fill -5 316 -5 5 316 5 minecraft:oak_planks
+execute in minecraft:overworld run tp @a 8 301 8
+place template minecraft:lobby 0 300 0
 
 scoreboard players set gaming craftle_settings 0
 
