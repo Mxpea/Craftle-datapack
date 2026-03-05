@@ -46,7 +46,7 @@ tellraw @a[tag=gaming] [{"text":"[游戏介绍]      ","color":"yellow",click_ev
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #debug pannel
-tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:"作 弊 模 式",color:"yellow"},{text:"==========" ,color:"gold"}]
+tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:"作弊 模式",color:"yellow"},{text:"==========" ,color:"gold"}]
 tellraw @a[tag=debug] [{"text":"[直接检查]","color":"aqua",click_event:{action:"run_command",command:"tag @s add check_ans"}}]
 tellraw @a[tag=debug] [{"text":"[获取id]","color":"aqua",click_event:{action:"run_command",command:'tellraw @s [{text:"ID: "},{score:{name:"type",objective:"craftle_table"}}]'}}]
 tellraw @a[tag=debug] [{text:"===========================",color:"gold"}]
@@ -183,7 +183,7 @@ tag @a[team=blue] remove red
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run gamemode spectator @a[tag=!gamer]
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run title @a[gamemode=spectator] subtitle {"text":"您现在是旁观者模式，请耐心等待游戏结束。","color":"red"}
 #自动进入大厅
-execute as @a[tag=!gamer,tag=!worldset] at @s if entity @s[y=-64,dy=379] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run tp 0 317 0
+execute as @a[tag=!gamer,tag=!worldset,gamemode=!creative] at @s if entity @s[y=-64,dy=379] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run tp 0 317 0
 
 #DISCOUNT，所有变量自减
 execute if score intro craftle_DISCOUNT matches 1.. run scoreboard players remove intro craftle_DISCOUNT 1

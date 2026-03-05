@@ -67,6 +67,8 @@ tag @a remove blue
 tag @a remove red
 tag @a remove random
 
+clear @a
+
 #调整基础游戏设定，调整为等待游戏开始状态
 gamemode adventure @a
 gamerule pvp false
