@@ -70,7 +70,7 @@ execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
 #清除大厅
-execute as @a if score @s craftle_settings matches 1 run fill -5 316 -5 5 319 5 minecraft:air
+execute as @a if score @s craftle_settings matches 1 run fill 16 306 16 0 300 0 air
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
 execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set gaming craftle_settings 1
