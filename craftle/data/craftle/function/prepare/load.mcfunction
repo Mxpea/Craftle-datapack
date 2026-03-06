@@ -3,6 +3,7 @@ execute if score answer_num random_store matches ..0 run function craftle:prepar
 execute if score answer_num random_store matches ..0 run return 1
 #重置玩家成就
 advancement revoke @a everything
+setworldspawn 8 301 8
 
 #移除旧记分板
 scoreboard objectives remove craftle_DISCOUNT
