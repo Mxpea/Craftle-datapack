@@ -85,7 +85,7 @@ tellraw @a [{translate:"load.message","bold":true}]
 #给所有在线玩家添加gaming标签
 tag @a add gaming
 execute in minecraft:overworld run tp @a 8 301 8
-place template minecraft:lobby 0 300 0
+place template craftle:lobby 0 300 0
 
 scoreboard players set gaming craftle_settings 0
 
