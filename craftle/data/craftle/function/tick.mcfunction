@@ -2,6 +2,7 @@
 #这玩意写的太石了，有机会我一定重构
 scoreboard players enable @a craftle_settings
 scoreboard players enable @a craftle_settings
+gamerule minecraft:respawn_radius 0
 
 execute if score gaming craftle_settings matches 0 run place template minecraft:lobby 0 300 0
 execute if score gaming craftle_settings matches 0 run kill @e[type=item]
@@ -51,7 +52,7 @@ tellraw @a[tag=gaming] [{translate:"button.game.intro","color":"yellow",click_ev
 tellraw @a[tag=gaming] [{text:"===========================",color:"gold"}]
 
 #debug pannel
-tellraw @a[tag=debug] [{text:"==========",color:"gold"},{text:"作弊 模式",color:"yellow"},{text:"==========" ,color:"gold"}]
+tellraw @a[tag=debug] [{text:"==========",color:"gold"},{translate:"gui.cheat",color:"yellow"},{text:"==========" ,color:"gold"}]
 tellraw @a[tag=debug] [{translate:"button.cheat.check","color":"aqua",click_event:{action:"run_command",command:"tag @s add check_ans"}}]
 tellraw @a[tag=debug] [{translate:"button.cheat.id","color":"aqua",click_event:{action:"run_command",command:'tellraw @s [{text:"ID: "},{score:{name:"type",objective:"craftle_table"}}]'}}]
 tellraw @a[tag=debug] [{text:"===========================",color:"gold"}]
@@ -60,7 +61,16 @@ execute as @a if score @s craftle_settings matches 64 run function craftle:maker
 #游戏开始若未分队则随机分队
 execute as @a if score @s craftle_settings matches 1 run schedule function craftle:reset_teamming 1t replace
 
-execute if score gaming craftle_settings matches 1 run scoreboard players set @a craftle_settings 0
+
+#提交答案后的处理
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run scoreboard players set red_cooldown craftle_DISCOUNT 2400
+execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.wait"}
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run scoreboard players set blue_cooldown craftle_DISCOUNT 2400
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.done"}
+
+execute if score gaming craftle_settings matches 1 as @a run execute unless score @s craftle_settings matches 99 run scoreboard players set @a craftle_settings 0
 
 #保持队伍颜色
 tag @a[team=red] add red
@@ -79,7 +89,7 @@ execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill 16 306 16 0 300 0 air
-execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 500 250 true @a
+execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 300 8000 true @a
 execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set gaming craftle_settings 1
 execute as @a if score @s craftle_settings matches 1 run title @a title [{translate:"start.title.1","underlined":true,"bold":true,"color":"gold"}]
@@ -104,22 +114,16 @@ execute as @a if score @s craftle_settings matches 11 run team join blue @s
 #加入红队
 execute as @a if score @s craftle_settings matches 12 run team join red @s
 
-#提交答案后的处理
-execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
-execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 0 run scoreboard players set red_cooldown craftle_DISCOUNT 2400
-execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.wait"}
-execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
-execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run scoreboard players set blue_cooldown craftle_DISCOUNT 2400
-execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.done"}
 
 #游戏介绍，包含跳过
 
 execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
+execute as @a if score @s craftle_settings matches 100 run kill @e[type=minecraft:item_display]
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {translate:"button.intro.skip","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
 execute as @a if score @s craftle_settings matches 101 run scoreboard players set intro craftle_DISCOUNT 0
-execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"踢出了Aurelith_FW",color:"gray"}]
+execute as @a if score @s craftle_settings matches 101 run tellraw @a [{translate:"tip.message.skip1",color:"gray"}]
 execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"<Aurelith_FW> QAQ "}]
-execute as @a if score @s craftle_settings matches 101 run tellraw @a [{text:"Aurelith_FW退出了游戏",color:"yellow"}]
+execute as @a if score @s craftle_settings matches 101 run tellraw @a [{translate:"tip.message.19",color:"yellow"}]
 execute if score intro craftle_DISCOUNT matches 400..2000 run function craftle:intro
 execute as @a if score @s craftle_settings matches 101 run kill @e[type=minecraft:item_display]
 
@@ -176,6 +180,7 @@ execute as @a if score @s craftle_DISCOUNT matches 1.. run scoreboard players re
 execute if score hint_discount craftle_DISCOUNT matches 1.. run scoreboard players remove hint_discount craftle_DISCOUNT 1
 
 #reset
+execute if score gaming craftle_settings matches 0 run tag @a remove gamer
 scoreboard players set @a craftle_settings 0
 scoreboard players set @a sneak_time 0
 tag @a remove debug
