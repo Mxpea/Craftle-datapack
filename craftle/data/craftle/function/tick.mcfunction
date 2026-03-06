@@ -4,7 +4,7 @@ scoreboard players enable @a craftle_settings
 scoreboard players enable @a craftle_settings
 gamerule minecraft:respawn_radius 0
 
-execute if score gaming craftle_settings matches 0 run place template minecraft:lobby 0 300 0
+execute if score gaming craftle_settings matches 0 run place template craftle:lobby 0 300 0
 execute if score gaming craftle_settings matches 0 run kill @e[type=item]
 
 #锁定玩家配方,mx干的，真是太可恶了
