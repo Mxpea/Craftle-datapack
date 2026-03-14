@@ -20,6 +20,7 @@ scoreboard objectives add craftle_scores dummy {translate:"score.score"}
 scoreboard objectives add craftle_dashbord dummy "CRAFTLE"
 scoreboard objectives add sneak_time minecraft.custom:minecraft.sneak_time
 scoreboard objectives add correct_times dummy
+scoreboard objectives add craftle_ifBlock dummy
 
 #移除之前bossbar
 bossbar remove craftle:red_cooldown
@@ -81,6 +82,9 @@ gamerule keep_inventory true
 difficulty peaceful
 
 tellraw @a [{translate:"load.message","bold":true}]
+
+data modify storage craftle:temp isBlock set value "block"
+data modify storage craftle:temp isItem set value "item"
 
 #给所有在线玩家添加gaming标签
 tag @a add gaming

@@ -82,11 +82,11 @@ tag @a[team=] remove red
 gamemode survival @a[tag=gamer]
 
 #刚刚开始游戏时的处理
+execute as @a if score @s craftle_settings matches 1 run scoreboard players set @a craftle_DISCOUNT 0
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
-execute as @a if score @s craftle_settings matches 1 run scoreboard players set @a craftle_DISCOUNT 0
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill 16 306 16 0 300 0 air
@@ -146,7 +146,8 @@ execute if score hint_discount craftle_DISCOUNT matches 40 run tellraw @a {trans
 execute if score hint_discount craftle_DISCOUNT matches 20 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 20 run tellraw @a {translate:"hint.message.1s"}
 execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
-execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:answer
+execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint_gen
+execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:hint
 execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 
 #提交答案后比较

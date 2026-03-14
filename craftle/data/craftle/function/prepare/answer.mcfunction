@@ -19,6 +19,9 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 #染料 #craftle:dye
 #煤炭 #craftle:coal
 #灵魂方块 #craftle:soul_block
+#鸡蛋 #craftle:eggs
+#去皮木材 #craftle:stripped_logs
+
 #统计配方列表 一行20个
 #弩
 #活塞 音符盒 侦测器 TNT 脚手架 唱片机 盔甲架 末影箱 红石比较器 红石灯 砂轮 附魔台 切石机 讲台 制箭台 锻造台 制图台 织布机 重生锚 磁石
@@ -433,12 +436,12 @@ execute if score type craftle_table matches 38 run data modify storage craftle:a
 execute if score type craftle_table matches 39 run data modify storage craftle:answer item_ans set value "block.minecraft.oak_hanging_sign"
 execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_1 set value "minecraft:iron_chain"
 execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_3 set value "minecraft:iron_chain"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_4 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_5 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_6 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_7 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_8 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_9 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_4 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_5 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_6 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_7 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_8 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 39 run data modify storage craftle:answer craft_9 set value "#craftle:stripped_logs"
 
 #铜箱子
 execute if score type craftle_table matches 40 run data modify storage craftle:answer item_ans set value "block.minecraft.copper_chest"
@@ -466,12 +469,12 @@ execute if score type craftle_table matches 41 run data modify storage craftle:a
 
 #展示架
 execute if score type craftle_table matches 42 run data modify storage craftle:answer item_ans set value "block.minecraft.dark_oak_shelf"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_1 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_2 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_3 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_7 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_8 set value "minecraft:stripped_oak_log"
-execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_9 set value "minecraft:stripped_oak_log"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_1 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_2 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_3 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_7 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_8 set value "#craftle:stripped_logs"
+execute if score type craftle_table matches 42 run data modify storage craftle:answer craft_9 set value "#craftle:stripped_logs"
 
 #铜灯笼
 execute if score type craftle_table matches 43 run data modify storage craftle:answer item_ans set value "block.minecraft.copper_lantern"
@@ -524,7 +527,7 @@ execute if score type craftle_table matches 47 run data modify storage craftle:a
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_2 set value "minecraft:milk_bucket"
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_3 set value "minecraft:milk_bucket"
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_4 set value "minecraft:sugar"
-execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_5 set value "minecraft:egg"
+execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_5 set value "#craftle:eggs"
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_6 set value "minecraft:sugar"
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_7 set value "minecraft:wheat"
 execute if score type craftle_table matches 47 run data modify storage craftle:answer craft_8 set value "minecraft:dropper"
@@ -784,7 +787,7 @@ execute if score type craftle_table matches 76 run data modify storage craftle:a
 execute if score type craftle_table matches 77 run data modify storage craftle:answer item_ans set value "item.minecraft.pumpkin_pie"
 execute if score type craftle_table matches 77 run data modify storage craftle:answer craft_4 set value "minecraft:pumpkin"
 execute if score type craftle_table matches 77 run data modify storage craftle:answer craft_5 set value "minecraft:sugar"
-execute if score type craftle_table matches 77 run data modify storage craftle:answer craft_8 set value "minecraft:egg"
+execute if score type craftle_table matches 77 run data modify storage craftle:answer craft_8 set value "#craftle:eggs"
 
 # 78 甜菜汤
 execute if score type craftle_table matches 78 run data modify storage craftle:answer item_ans set value "item.minecraft.beetroot_soup"
