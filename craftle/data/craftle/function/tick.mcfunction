@@ -182,6 +182,7 @@ execute as @a if score @s craftle_DISCOUNT matches 1.. run scoreboard players re
 execute if score hint_discount craftle_DISCOUNT matches 1.. run scoreboard players remove hint_discount craftle_DISCOUNT 1
 
 #reset
+execute as @a unless score craftle_DISCOUNT matches -1.. run scoreboard players set @s craftle_DISCOUNT 0
 execute if score gaming craftle_settings matches 0 run tag @a remove gamer
 scoreboard players set @a craftle_settings 0
 scoreboard players set @a sneak_time 0
