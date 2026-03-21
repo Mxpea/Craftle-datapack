@@ -13,69 +13,6 @@ data modify storage craftle:answer teams set from entity @a[tag=check_ans,limit=
 #将正确答案数量重置为0
 scoreboard players set @a[tag=check_ans] correct_times 0
 
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[9].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type11 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type11 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[10].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type12 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type12 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[11].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type13 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type13 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[18].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type21 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type21 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[19].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type22 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type22 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[20].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type23 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type23 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[27].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type31 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type31 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[28].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type32 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type32 set value "block"
-
-#scoreboard players set temp craftle_ifBlock 0
-#data modify storage craftle:answer item set value "bedrock"
-#data modify storage craftle:answer item set string entity @s Inventory[29].id 10
-#function craftle:is_block with storage craftle:answer
-#execute if score temp craftle_ifBlock matches 0 run data modify storage craftle:answer type33 set value "item"
-#execute if score temp craftle_ifBlock matches 1 run data modify storage craftle:answer type33 set value "block"
-
 data modify storage craftle:answer item11 set value "minecraft:bedrock"
 data modify storage craftle:answer item12 set value "minecraft:bedrock"
 data modify storage craftle:answer item13 set value "minecraft:bedrock"

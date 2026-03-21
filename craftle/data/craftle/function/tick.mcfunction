@@ -36,6 +36,8 @@ execute as @a[tag=gamer,x_rotation=-90] if score @s sneak_time matches 1.. if sc
 execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_ans
 #如果玩家有pre_check_ans标签，显示提交猜测按钮
 tellraw @a[tag=pre_check_ans] [{translate:"button.run.guess","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{translate:"button.run.tip",color:"gray"}]
+tellraw @a[tag=pre_check_ans] [{translate:"button.run.fasttalk","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 90"}},{translate:"button.tip.fasttalk",color:"gray"}]
+execute as @a if score @s craftle_settings matches 90 run function craftle:fasttalk
 
 #潜行并抬头时给所有未加入游戏的玩家显示面板，并防止重复出现
 execute as @a[tag=!gamer,x_rotation=-90] if score @s sneak_time matches 1.. if score board craftle_DISCOUNT matches 0 run scoreboard players set board craftle_DISCOUNT 30

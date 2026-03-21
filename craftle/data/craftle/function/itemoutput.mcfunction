@@ -1,7 +1,4 @@
 $tellraw @a[team=$(teams)] [{text:"§6§l[Craftle]  "},{selector: "@a[tag=check_ans]",color:"yellow"},{translate:"output.message.1"}]
-#$tellraw @a[team=$(teams)] [{text:"          ■ ",color:$(display11)},{text:"■ ",color:$(display12)},{text:"■       ",color:$(display13)},{atlas:"$(type11)s",sprite:"minecraft:$(type11)/$(item11)"},{atlas:"$(type12)s",sprite:"minecraft:$(type12)/$(item12)"},{atlas:"$(type13)s",sprite:"minecraft:$(type13)/$(item13)"}]
-#$tellraw @a[team=$(teams)] [{text:"          ■ ",color:$(display21)},{text:"■ ",color:$(display22)},{text:"■       ",color:$(display23)},{atlas:"$(type21)s",sprite:"minecraft:$(type21)/$(item21)"},{atlas:"$(type22)s",sprite:"minecraft:$(type22)/$(item22)"},{atlas:"$(type23)s",sprite:"minecraft:$(type23)/$(item23)"}]
-#$tellraw @a[team=$(teams)] [{text:"          ■ ",color:$(display31)},{text:"■ ",color:$(display32)},{text:"■       ",color:$(display33)},{atlas:"$(type31)s",sprite:"minecraft:$(type31)/$(item31)"},{atlas:"$(type32)s",sprite:"minecraft:$(type32)/$(item32)"},{atlas:"$(type33)s",sprite:"minecraft:$(type33)/$(item33)"}]
 
 $tellraw @a[team=$(teams)] [{text:"          ■ ",color:$(display11)},{text:"■ ",color:$(display12)},{text:"■       ",color:$(display13)}]
 $tellraw @a[team=$(teams)] [{text:"          ■ ",color:$(display21)},{text:"■ ",color:$(display22)},{text:"■       ",color:$(display23)}]
