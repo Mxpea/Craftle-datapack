@@ -16,6 +16,7 @@ data modify storage craftle:answer craft_9 set value "minecraft:barrier"
 #原木 #minecraft:logs
 #木板 #minecraft:planks
 #羊毛 #minecraft:wool
+#木制台阶 #minecraft:wooden_slabs
 #染料 #craftle:dye
 #煤炭 #craftle:coal
 #灵魂方块 #craftle:soul_block
@@ -181,11 +182,11 @@ execute if score type craftle_table matches 13 run data modify storage craftle:a
 
 #讲台
 execute if score type craftle_table matches 14 run data modify storage craftle:answer item_ans set value "block.minecraft.lectern"
-execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_1 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_2 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_3 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_1 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_2 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_3 set value "#minecraft:wooden_slabs"
 execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_5 set value "minecraft:bookshelf"
-execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_8 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 14 run data modify storage craftle:answer craft_8 set value "#minecraft:wooden_slabs"
 
 #制箭台
 execute if score type craftle_table matches 15 run data modify storage craftle:answer item_ans set value "block.minecraft.fletching_table"
@@ -392,12 +393,12 @@ execute if score type craftle_table matches 34 run data modify storage craftle:a
 #木桶
 execute if score type craftle_table matches 35 run data modify storage craftle:answer item_ans set value "block.minecraft.barrel"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_1 set value "#minecraft:planks"
-execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_2 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_2 set value "#minecraft:wooden_slabs"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_3 set value "#minecraft:planks"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_4 set value "#minecraft:planks"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_6 set value "#minecraft:planks"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_7 set value "#minecraft:planks"
-execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_8 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_8 set value "#minecraft:wooden_slabs"
 execute if score type craftle_table matches 35 run data modify storage craftle:answer craft_9 set value "#minecraft:planks"
 
 #灯笼
@@ -752,9 +753,9 @@ execute if score type craftle_table matches 72 run data modify storage craftle:a
 execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_4 set value "minecraft:quartz"
 execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_5 set value "minecraft:quartz"
 execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_6 set value "minecraft:quartz"
-execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_7 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_8 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_9 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_7 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_8 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 72 run data modify storage craftle:answer craft_9 set value "#minecraft:wooden_slabs"
 
 # 73 标靶
 execute if score type craftle_table matches 73 run data modify storage craftle:answer item_ans set value "block.minecraft.target"
@@ -944,13 +945,13 @@ execute if score type craftle_table matches 96 run data modify storage craftle:a
 
 # 97 堆肥桶
 execute if score type craftle_table matches 97 run data modify storage craftle:answer item_ans set value "block.minecraft.composter"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_1 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_3 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_4 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_6 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_7 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_8 set value "minecraft:oak_slab"
-execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_9 set value "minecraft:oak_slab"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_1 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_3 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_4 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_6 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_7 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_8 set value "#minecraft:wooden_slabs"
+execute if score type craftle_table matches 97 run data modify storage craftle:answer craft_9 set value "#minecraft:wooden_slabs"
 
 # 98 收纳袋
 execute if score type craftle_table matches 98 run data modify storage craftle:answer item_ans set value "item.minecraft.bundle"
