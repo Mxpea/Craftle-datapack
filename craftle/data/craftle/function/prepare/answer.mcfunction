@@ -337,10 +337,10 @@ execute if score type craftle_table matches 29 run data modify storage craftle:a
 
 #白色羊毛画
 execute if score type craftle_table matches 30 run data modify storage craftle:answer item_ans set value "entity.minecraft.painting"
-execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_1 set value "#minecraft:wool"
-execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_2 set value "#minecraft:wool"
-execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_3 set value "#minecraft:wool"
-execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_4 set value "#minecraft:wool"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_1 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_2 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_3 set value "minecraft:stick"
+execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_4 set value "minecraft:stick"
 execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_5 set value "#minecraft:wool"
 execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_6 set value "minecraft:stick"
 execute if score type craftle_table matches 30 run data modify storage craftle:answer craft_7 set value "minecraft:stick"

@@ -1,7 +1,6 @@
 #让每个玩家都能点击左下角
 #这玩意写的太石了，有机会我一定重构
 scoreboard players enable @a craftle_settings
-scoreboard players enable @a craftle_settings
 gamerule minecraft:respawn_radius 0
 
 execute if score gaming craftle_settings matches 0 run place template craftle:lobby 0 300 0
