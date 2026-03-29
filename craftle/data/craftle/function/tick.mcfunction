@@ -1,10 +1,9 @@
 #让每个玩家都能点击左下角
 #这玩意写的太石了，有机会我一定重构
 scoreboard players enable @a craftle_settings
-scoreboard players enable @a craftle_settings
 gamerule minecraft:respawn_radius 0
 
-execute if score gaming craftle_settings matches 0 run place template craftle:lobby 0 300 0
+execute if score gaming craftle_settings matches 0 run place template craftle:lobby -9 299 -6
 execute if score gaming craftle_settings matches 0 run kill @e[type=item]
 
 #锁定玩家配方,mx干的，真是太可恶了
@@ -70,7 +69,7 @@ execute as @a[team=red] if score @s craftle_settings matches 99 if score red_coo
 execute as @a[team=red] if score @s craftle_settings matches 99 if score red_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.wait"}
 execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run tag @s add check_ans
 execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 0 run scoreboard players set blue_cooldown craftle_DISCOUNT 2400
-execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.done"}
+execute as @a[team=blue] if score @s craftle_settings matches 99 if score blue_cooldown craftle_DISCOUNT matches 1.. run tellraw @s[tag=!check_ans] {translate:"tip.message.wait"}
 
 execute if score gaming craftle_settings matches 1 as @a run execute unless score @s craftle_settings matches 99 run scoreboard players set @a craftle_settings 0
 
@@ -85,13 +84,14 @@ gamemode survival @a[tag=gamer]
 
 #刚刚开始游戏时的处理
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set @a craftle_DISCOUNT 0
+execute as @a if score @s craftle_settings matches 1 run xp set @a 0
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
-execute as @a if score @s craftle_settings matches 1 run fill 16 306 16 0 300 0 air
+execute as @a if score @s craftle_settings matches 1 run fill -9 299 -6 28 313 27 air
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 300 8000 true @a
 execute as @a if score @s craftle_settings matches 1 run execute as @a at @s run spawnpoint
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set gaming craftle_settings 1
@@ -137,10 +137,6 @@ execute if score hint_discount craftle_DISCOUNT matches 1200 run playsound entit
 execute if score hint_discount craftle_DISCOUNT matches 1200 run tellraw @a {translate:"hint.message.1m"}
 execute if score hint_discount craftle_DISCOUNT matches 200 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 200 run tellraw @a {translate:"hint.message.10s"}
-execute if score hint_discount craftle_DISCOUNT matches 100 run playsound entity.experience_orb.pickup player @a
-execute if score hint_discount craftle_DISCOUNT matches 100 run tellraw @a {translate:"hint.message.5s"}
-execute if score hint_discount craftle_DISCOUNT matches 80 run playsound entity.experience_orb.pickup player @a
-execute if score hint_discount craftle_DISCOUNT matches 80 run tellraw @a {translate:"hint.message.4s"}
 execute if score hint_discount craftle_DISCOUNT matches 60 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 60 run tellraw @a {translate:"hint.message.3s"}
 execute if score hint_discount craftle_DISCOUNT matches 40 run playsound entity.experience_orb.pickup player @a
@@ -149,7 +145,6 @@ execute if score hint_discount craftle_DISCOUNT matches 20 run playsound entity.
 execute if score hint_discount craftle_DISCOUNT matches 20 run tellraw @a {translate:"hint.message.1s"}
 execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint_gen
-execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:hint
 execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 
 #提交答案后比较
