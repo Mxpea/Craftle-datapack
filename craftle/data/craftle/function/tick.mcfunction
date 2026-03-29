@@ -145,7 +145,6 @@ execute if score hint_discount craftle_DISCOUNT matches 20 run playsound entity.
 execute if score hint_discount craftle_DISCOUNT matches 20 run tellraw @a {translate:"hint.message.1s"}
 execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint_gen
-execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint with storage craftle:hint
 execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 
 #提交答案后比较
