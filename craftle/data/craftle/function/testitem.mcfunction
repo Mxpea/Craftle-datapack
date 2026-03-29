@@ -1,20 +1,63 @@
-data modify storage craftle:temp arg.item_11 set from entity @s Inventory[{Slot:9b}].id
-execute unless data entity @s Inventory[{Slot:9b}].id run data modify storage craftle:temp arg.item_11 set value "minecraft:air"
-data modify storage craftle:temp arg.item_12 set from entity @s Inventory[{Slot:10b}].id
-execute unless data entity @s Inventory[{Slot:10b}].id run data modify storage craftle:temp arg.item_12 set value "minecraft:air"
-data modify storage craftle:temp arg.item_13 set from entity @s Inventory[{Slot:11b}].id
-execute unless data entity @s Inventory[{Slot:11b}].id run data modify storage craftle:temp arg.item_13 set value "minecraft:air"
-data modify storage craftle:temp arg.item_21 set from entity @s Inventory[{Slot:18b}].id
-execute unless data entity @s Inventory[{Slot:18b}].id run data modify storage craftle:temp arg.item_21 set value "minecraft:air"
-data modify storage craftle:temp arg.item_22 set from entity @s Inventory[{Slot:19b}].id
-execute unless data entity @s Inventory[{Slot:19b}].id run data modify storage craftle:temp arg.item_22 set value "minecraft:air"
-data modify storage craftle:temp arg.item_23 set from entity @s Inventory[{Slot:20b}].id
-execute unless data entity @s Inventory[{Slot:20b}].id run data modify storage craftle:temp arg.item_23 set value "minecraft:air"
-data modify storage craftle:temp arg.item_31 set from entity @s Inventory[{Slot:27b}].id
-execute unless data entity @s Inventory[{Slot:27b}].id run data modify storage craftle:temp arg.item_31 set value "minecraft:air"
-data modify storage craftle:temp arg.item_32 set from entity @s Inventory[{Slot:28b}].id
-execute unless data entity @s Inventory[{Slot:28b}].id run data modify storage craftle:temp arg.item_32 set value "minecraft:air"
-data modify storage craftle:temp arg.item_33 set from entity @s Inventory[{Slot:29b}].id
-execute unless data entity @s Inventory[{Slot:29b}].id run data modify storage craftle:temp arg.item_33 set value "minecraft:air"
-function craftle:itemoutput with storage craftle:temp arg
-data remove storage craftle:temp arg
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:9b}].id 10
+execute unless data entity @s Inventory[{Slot:9b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_11"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:10b}].id 10
+execute unless data entity @s Inventory[{Slot:10b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_12"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:11b}].id 10
+execute unless data entity @s Inventory[{Slot:11b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_13"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:18b}].id 10
+execute unless data entity @s Inventory[{Slot:18b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_21"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:19b}].id 10
+execute unless data entity @s Inventory[{Slot:19b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_22"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:20b}].id 10
+execute unless data entity @s Inventory[{Slot:20b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_23"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:27b}].id 10
+execute unless data entity @s Inventory[{Slot:27b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_31"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:28b}].id 10
+execute unless data entity @s Inventory[{Slot:28b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_32"
+function craftle:testitem_merge with storage craftle:temp
+
+data modify storage craftle:temp Sid set string entity @s Inventory[{Slot:29b}].id 10
+execute unless data entity @s Inventory[{Slot:29b}].id run data modify storage craftle:temp Sid set value "air"
+scoreboard players set temp craftle_ifBlock 0
+function craftle:is_block with storage craftle:temp
+data modify storage craftle:temp val set value "item_33"
+function craftle:testitem_merge with storage craftle:temp
+

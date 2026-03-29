@@ -13,25 +13,7 @@ data modify storage craftle:answer teams set from entity @s Tags[0]
 #将正确答案数量重置为0
 scoreboard players set @a[tag=check_ans] correct_times 0
 
-data modify storage craftle:answer item11 set value "minecraft:bedrock"
-data modify storage craftle:answer item12 set value "minecraft:bedrock"
-data modify storage craftle:answer item13 set value "minecraft:bedrock"
-data modify storage craftle:answer item21 set value "minecraft:bedrock"
-data modify storage craftle:answer item22 set value "minecraft:bedrock"
-data modify storage craftle:answer item23 set value "minecraft:bedrock"
-data modify storage craftle:answer item31 set value "minecraft:bedrock"
-data modify storage craftle:answer item32 set value "minecraft:bedrock"
-data modify storage craftle:answer item33 set value "minecraft:bedrock"
-
-data modify storage craftle:answer item11 set string entity @s Inventory[9].id 10
-data modify storage craftle:answer item12 set string entity @s Inventory[10].id 10
-data modify storage craftle:answer item13 set string entity @s Inventory[11].id 10
-data modify storage craftle:answer item21 set string entity @s Inventory[18].id 10
-data modify storage craftle:answer item22 set string entity @s Inventory[19].id 10
-data modify storage craftle:answer item23 set string entity @s Inventory[20].id 10
-data modify storage craftle:answer item31 set string entity @s Inventory[27].id 10
-data modify storage craftle:answer item32 set string entity @s Inventory[28].id 10
-data modify storage craftle:answer item33 set string entity @s Inventory[29].id 10
+function craftle:testitem
 
 #将每个物品分别与其他8个位置物品比较，如果有则设为黄色
 $execute as @a[tag=check_ans] if items entity @s container.10 $(craft_1) run data modify storage craftle:answer display12 set value "yellow"
