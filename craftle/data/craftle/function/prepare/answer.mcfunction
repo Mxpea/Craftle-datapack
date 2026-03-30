@@ -967,28 +967,17 @@ execute if score type craftle_table matches 99 run data modify storage craftle:a
 execute if score type craftle_table matches 99 run data modify storage craftle:answer craft_5 set value "#minecraft:wool"
 execute if score type craftle_table matches 99 run data modify storage craftle:answer craft_6 set value "minecraft:glass"
 
-# 100 下届合金锭
-execute if score type craftle_table matches 100 run data modify storage craftle:answer item_ans set value "item.minecraft.netherite_ingot"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_1 set value "minecraft:netherite_scrap"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_2 set value "minecraft:netherite_scrap"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_3 set value "minecraft:netherite_scrap"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_4 set value "minecraft:netherite_scrap"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_5 set value "minecraft:gold_ingot"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_6 set value "minecraft:gold_ingot"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_7 set value "minecraft:gold_ingot"
-execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_8 set value "minecraft:gold_ingot"
-
-# 101 安山岩
-execute if score type craftle_table matches 101 run data modify storage craftle:answer item_ans set value "block.minecraft.granite"
-execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_4 set value "minecraft:diorite"
-execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_5 set value "minecraft:cobblestone"
+# 100 安山岩
+execute if score type craftle_table matches 100 run data modify storage craftle:answer item_ans set value "block.minecraft.granite"
+execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_4 set value "minecraft:diorite"
+execute if score type craftle_table matches 100 run data modify storage craftle:answer craft_5 set value "minecraft:cobblestone"
 
 #饰纹陶罐
-execute if score type craftle_table matches 102 run data modify storage craftle:answer item_ans set value "block.minecraft.decorated_pot"
-execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_2 set value "minecraft:brick"
-execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_4 set value "minecraft:brick"
-execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_6 set value "minecraft:brick"
-execute if score type craftle_table matches 102 run data modify storage craftle:answer craft_8 set value "minecraft:brick"
+execute if score type craftle_table matches 101 run data modify storage craftle:answer item_ans set value "block.minecraft.decorated_pot"
+execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_2 set value "minecraft:brick"
+execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_4 set value "minecraft:brick"
+execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_6 set value "minecraft:brick"
+execute if score type craftle_table matches 101 run data modify storage craftle:answer craft_8 set value "minecraft:brick"
 
 
 

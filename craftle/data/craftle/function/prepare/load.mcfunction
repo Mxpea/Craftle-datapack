@@ -89,7 +89,7 @@ data modify storage craftle:temp isItem set value "item"
 #给所有在线玩家添加gaming标签
 tag @a add gaming
 execute in minecraft:overworld run tp @a 8 301 8
-place template craftle:lobby 0 300 0
+place template craftle:lobby -9 299 -6
 
 scoreboard players set gaming craftle_settings 0
 
