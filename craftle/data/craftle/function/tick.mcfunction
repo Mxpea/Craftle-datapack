@@ -119,7 +119,6 @@ execute as @a if score @s craftle_settings matches 12 run team join red @s
 
 
 #游戏介绍，包含跳过
-
 execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
 execute as @a if score @s craftle_settings matches 100 run kill @e[type=minecraft:item_display]
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {translate:"button.intro.skip","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
@@ -168,6 +167,7 @@ tag @a[team=blue] remove red
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run gamemode spectator @a[tag=!gamer]
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run title @a[gamemode=spectator] actionbar {translate:"actionbar.spectator","color":"red"}
 #自动进入大厅
+execute as @a[tag=!gamer,tag=!worldset,gamemode=!creative] at @s if entity @s[y=-64,dy=364] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run execute in minecraft:overworld run playsound minecraft:entity.enderman.teleport ui @s 8 301 8 100
 execute as @a[tag=!gamer,tag=!worldset,gamemode=!creative] at @s if entity @s[y=-64,dy=364] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run execute in minecraft:overworld run tp @s 8 301 8
 
 #DISCOUNT，所有变量自减
