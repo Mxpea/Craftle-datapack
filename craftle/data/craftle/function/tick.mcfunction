@@ -89,6 +89,7 @@ execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
+execute as @a if score @s craftle_settings matches 1 run scoreboard objectives setdisplay sidebar
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill -9 299 -6 28 313 27 air
@@ -158,7 +159,7 @@ execute as @a[tag=check_ans] unless items entity @s container.27 * run item repl
 execute as @a[tag=check_ans] unless items entity @s container.28 * run item replace entity @s container.28 with minecraft:barrier
 execute as @a[tag=check_ans] unless items entity @s container.29 * run item replace entity @s container.29 with minecraft:barrier
 #此条代码为游戏关键，牵扯多个文件
-execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
+execute as @a[tag=check_ans,limit=1,sort=random] run function craftle:answer_compare with storage craftle:answer
 
 #防止出现队伍颜色错误
 tag @a[team=red] remove blue
