@@ -89,6 +89,7 @@ execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
 execute as @a if score @s craftle_settings matches 1 run clear @a
 execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
+execute as @a if score @s craftle_settings matches 1 run scoreboard objectives setdisplay sidebar
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill -9 299 -6 28 313 27 air
@@ -119,7 +120,6 @@ execute as @a if score @s craftle_settings matches 12 run team join red @s
 
 
 #游戏介绍，包含跳过
-
 execute as @a if score @s craftle_settings matches 100 run scoreboard players set intro craftle_DISCOUNT 2000
 execute as @a if score @s craftle_settings matches 100 run kill @e[type=minecraft:item_display]
 execute as @a if score @s craftle_settings matches 100 run tellraw @a {translate:"button.intro.skip","color":"yellow",click_event:{action:"run_command",command:"trigger craftle_settings set 101"}}
@@ -159,7 +159,7 @@ execute as @a[tag=check_ans] unless items entity @s container.27 * run item repl
 execute as @a[tag=check_ans] unless items entity @s container.28 * run item replace entity @s container.28 with minecraft:barrier
 execute as @a[tag=check_ans] unless items entity @s container.29 * run item replace entity @s container.29 with minecraft:barrier
 #此条代码为游戏关键，牵扯多个文件
-execute as @a[tag=check_ans] run function craftle:answer_compare with storage craftle:answer
+execute as @a[tag=check_ans,limit=1,sort=random] run function craftle:answer_compare with storage craftle:answer
 
 #防止出现队伍颜色错误
 tag @a[team=red] remove blue
@@ -168,6 +168,7 @@ tag @a[team=blue] remove red
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run gamemode spectator @a[tag=!gamer]
 execute as @a[tag=gamer] if score gaming craftle_settings matches 1 run title @a[gamemode=spectator] actionbar {translate:"actionbar.spectator","color":"red"}
 #自动进入大厅
+execute as @a[tag=!gamer,tag=!worldset,gamemode=!creative] at @s if entity @s[y=-64,dy=364] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run execute in minecraft:overworld run playsound minecraft:entity.enderman.teleport ui @s 8 301 8 100
 execute as @a[tag=!gamer,tag=!worldset,gamemode=!creative] at @s if entity @s[y=-64,dy=364] if entity @s[gamemode=!spectator] if score gaming craftle_settings matches 0 run execute in minecraft:overworld run tp @s 8 301 8
 
 #DISCOUNT，所有变量自减
