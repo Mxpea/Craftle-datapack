@@ -8,4 +8,4 @@ data modify storage craftle:hint craft_6 set from storage craftle:answer craft_6
 data modify storage craftle:hint craft_7 set from storage craftle:answer craft_7
 data modify storage craftle:hint craft_8 set from storage craftle:answer craft_8
 data modify storage craftle:hint craft_9 set from storage craftle:answer craft_9
-function craftle:hint with storage craftle:hint
+function craftle:hint_rangen with storage craftle:hint
