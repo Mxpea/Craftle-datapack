@@ -36,6 +36,7 @@ execute as @a if score @s craftle_DISCOUNT matches 300 run tag @s add pre_check_
 #如果玩家有pre_check_ans标签，显示提交猜测按钮
 tellraw @a[tag=pre_check_ans] [{translate:"button.run.guess","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 99"}},{translate:"button.run.tip",color:"gray"}]
 tellraw @a[tag=pre_check_ans] [{translate:"button.run.fasttalk","color":"green",click_event:{action:"run_command",command:"trigger craftle_settings set 90"}},{translate:"button.tip.fasttalk",color:"gray"}]
+tellraw @a[tag=pre_check_ans] [{translate:"button.run.teammsg","color":"green",click_event:{action:"suggest_command",command:"/teammsg "}},{translate:"button.tip.teammsg",color:"gray"}]
 execute as @a if score @s craftle_settings matches 90 run function craftle:fasttalk
 
 #潜行并抬头时给所有未加入游戏的玩家显示面板，并防止重复出现
@@ -83,6 +84,7 @@ tag @a[team=] remove red
 gamemode survival @a[tag=gamer]
 
 #刚刚开始游戏时的处理
+execute as @a if score @s craftle_settings matches 1 run function craftle:hint_init
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set @a craftle_DISCOUNT 0
 execute as @a if score @s craftle_settings matches 1 run xp set @a 0
 execute as @a if score @s craftle_settings matches 1 run tag @a add gamer
@@ -145,6 +147,8 @@ execute if score hint_discount craftle_DISCOUNT matches 20 run playsound entity.
 execute if score hint_discount craftle_DISCOUNT matches 20 run tellraw @a {translate:"hint.message.1s"}
 execute if score hint_discount craftle_DISCOUNT matches 1 run playsound entity.experience_orb.pickup player @a
 execute if score hint_discount craftle_DISCOUNT matches 1 run function craftle:hint_gen
+execute if score hint_discount craftle_DISCOUNT matches 1 if score ran_num craftle_table matches ..-1 run tellraw @a {translate:"hint.message.done",color:"green"}
+execute if score hint_discount craftle_DISCOUNT matches 1 if score ran_num craftle_table matches ..-1 run scoreboard players set hint_discount craftle_DISCOUNT -1
 execute if score hint_discount craftle_DISCOUNT matches 1 run scoreboard players set hint_discount craftle_DISCOUNT 6001
 
 #提交答案后比较
@@ -188,3 +192,8 @@ tag @a remove debug
 tag @a remove gaming
 tag @a remove pre_check_ans
 tag @a remove check_ans
+team leave @a[gamemode=spectator]
+tag @a[gamemode=spectator] remove blue
+tag @a[gamemode=spectator] remove red
+
+effect give @a[tag=nigth_vision] minecraft:night_vision infinite 1 true

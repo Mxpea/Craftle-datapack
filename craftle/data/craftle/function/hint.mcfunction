@@ -1,5 +1,4 @@
 #随机选择一个位置提示
-execute store result score ran_hint craftle_table run random value 1..9
 tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.tip"}]
 $execute if score ran_hint craftle_table matches 1 run tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.craft_1"},{translate:"$(craft_1)",color:"green"}]
 $execute if score ran_hint craftle_table matches 2 run tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.craft_2"},{translate:"$(craft_2)",color:"green"}]
@@ -10,3 +9,4 @@ $execute if score ran_hint craftle_table matches 6 run tellraw @a [{text:"[craft
 $execute if score ran_hint craftle_table matches 7 run tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.craft_7"},{translate:"$(craft_7)",color:"green"}]
 $execute if score ran_hint craftle_table matches 8 run tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.craft_8"},{translate:"$(craft_8)",color:"green"}]
 $execute if score ran_hint craftle_table matches 9 run tellraw @a [{text:"[craftle] - ",color:"gold"},{translate:"hint.message.craft_9"},{translate:"$(craft_9)",color:"green"}]
+execute unless score ran_hint craftle_table matches 1..9 run tellraw @a [{text:"[craftle] - ",color:"gold"},{text:"If you see this, there's an issue with the hint system.",color:"red"}]
