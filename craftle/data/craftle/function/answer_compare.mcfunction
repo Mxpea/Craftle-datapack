@@ -9,7 +9,9 @@ data modify storage craftle:answer display31 set value "red"
 data modify storage craftle:answer display32 set value "red"
 data modify storage craftle:answer display33 set value "red"
 #获取队伍信息
-data modify storage craftle:answer teams set from entity @s Tags[0]
+execute if entity @s[team=red] run data modify storage craftle:answer teams set value "red"
+execute if entity @s[team=blue] run data modify storage craftle:answer teams set value "blue"
+#data modify storage craftle:answer teams set from entity @s Tags[0]
 #将正确答案数量重置为0
 scoreboard players set @a[tag=check_ans] correct_times 0
 

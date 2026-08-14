@@ -84,6 +84,8 @@ tag @a[team=] remove red
 gamemode survival @a[tag=gamer]
 
 #刚刚开始游戏时的处理
+#将未分队玩家随机分队
+execute as @a if score @s craftle_settings matches 1 run function craftle:random_team
 execute as @a if score @s craftle_settings matches 1 run function craftle:hint_init
 execute as @a if score @s craftle_settings matches 1 run scoreboard players set @a craftle_DISCOUNT 0
 execute as @a if score @s craftle_settings matches 1 run xp set @a 0
@@ -93,6 +95,7 @@ execute as @a if score @s craftle_settings matches 1 run title @a subtitle ""
 execute as @a if score @s craftle_settings matches 1 run effect clear @a
 execute as @a if score @s craftle_settings matches 1 run scoreboard objectives setdisplay sidebar
 execute as @a if score @s craftle_settings matches 1 if score intro craftle_DISCOUNT matches 480..2000 run trigger craftle_settings set 101
+execute as @a if score @s craftle_settings matches 1 run xp set @s 0 levels
 #清除大厅
 execute as @a if score @s craftle_settings matches 1 run fill -9 299 -6 28 313 27 air
 execute as @a if score @s craftle_settings matches 1 run spreadplayers ~ ~ 300 8000 true @a
@@ -107,8 +110,6 @@ execute as @a if score @s craftle_settings matches 1 run scoreboard players set 
 execute as @a if score @s craftle_settings matches 1 run gamerule pvp true
 execute as @a if score @s craftle_settings matches 1 run gamerule advance_time true
 execute as @a if score @s craftle_settings matches 1 run difficulty easy
-#将未分队玩家随机分队
-execute as @a if score @s craftle_settings matches 1 run function craftle:random_team
 #随机分队
 execute as @a if score @s craftle_settings matches 2 run schedule function craftle:reset_teamming 1t replace
 execute as @a if score @s craftle_settings matches 2 run function craftle:random_team
